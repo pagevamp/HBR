@@ -1,0 +1,495 @@
+/*==============================================
+    TABLET SCREEN DEVICES
+==============================================*/
+
+@media screen and (max-width: 1199px) {
+
+    .hbr .container {
+        padding: 0 22px;
+    }
+
+    /*=====================================================
+        HBR SUB NAVIGATION STYLES
+    =====================================================*/
+
+    .hbr-sub-navigation {
+        padding: 10px 0 14px;
+    }
+
+    .hbr-sub-navigation .container {
+        padding: 0 40px;
+    }
+    
+    .hbr-sub-navigation__logo {
+        width: 70px;
+    }
+
+    .hbr-sub-navigation__links {
+        width: calc(100% - 70px);
+        padding-left: 16px;
+    }
+
+    .hbr-sub-navigation__links ul li a {
+        font-size: 10px;
+        line-height: 18px;
+        letter-spacing: 0.4px;
+    }
+
+
+    /*=====================================================
+        HBR IMAGE TEXT MODULE STYLES
+    =====================================================*/
+
+    .hbr-image-text-module__inner {
+        margin: 0 -10px;
+    }
+
+    .hbr-image-text-module__inner .thumbnail-img {
+        flex-basis: 50%;
+        padding: 0 10px;
+    }
+
+    .hbr-image-text-module__inner .thumbnail-img img {
+        aspect-ratio: 352/456;
+    }
+
+    .hbr-image-text-module__inner .content {
+        flex-basis: 50%;
+        padding: 0 10px;
+    }
+
+    .hbr-image-text-module__inner .content h2 {
+        font-size: 60px;
+        line-height: 65px;
+        letter-spacing: -3px;
+        padding-right: 0;
+        max-width: 200px;
+    }
+
+
+    /*=====================================================
+        HBR IMAGE CARD WITH TEXT STYLES
+    =====================================================*/
+
+    .hbr-image-card-with-text {
+        padding-top: 20px;
+    }
+
+    .hbr-image-card-with-text__inner {
+        margin: 0 -10px;
+    }
+
+    .hbr-image-card-with-text__inner .column-left {
+        flex-basis: 50%;
+        padding: 0 10px;
+    }
+
+    .hbr-image-card-with-text__inner .column-right {
+        flex-basis: 50%;
+        padding: 0 10px;
+    }
+
+    .hbr-image-card-with-text__inner .column-right .card-featured-post__content {
+        width: 100%;
+    }
+
+    .card-featured-post__thumbnail img,
+    .hbr-image-card-with-text__inner .column-right .card-featured-post__thumbnail img {
+        aspect-ratio: 352/420;
+    }
+
+
+    /*=====================================================
+        HBR TEXT MODULE SPONSORED STYLES
+    =====================================================*/
+
+    .hbr-text-module-sponsored {
+        padding-top: 20px;
+    }
+
+    .hbr-text-module-sponsored__inner .column-left,
+    .hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner .column-left {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hbr-text-module-sponsored__inner .column-right,
+    .hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner .column-right {
+        flex-basis: 100%;
+    }
+
+    .hbr-text-module-sponsored__thumbnail img {
+        aspect-ratio: 724/381;
+    }
+
+    .card-sponsored {
+        aspect-ratio: 721/404;
+    }
+
+    .card-sponsored__thumbnail img {
+        aspect-ratio: 721/404;
+    }
+}
+
+    /*=====================================================
+        Small tablet devices
+    =====================================================*/
+    @media only screen and (max-width: 1023px) {
+        /*=====================================================
+        HBR Leadspace
+        =====================================================*/
+
+        .hbr-leadspace {
+            margin-bottom: 121px;
+        }
+        .hbr-leadspace--eyebrow {
+            font-size: 14px;
+            margin-bottom: 8px;
+            line-height: 1.428;
+        }
+
+        .hbr-leadspace--title h1 {
+            flex: 1 0 auto;
+            font-size: 68px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .hbr-leadspace--title a {
+            margin-left: 0;
+            width: 80px;
+            height: 80px;
+        }
+
+        .hbr-leadspace--title a svg {
+            width: 24px;
+        }
+
+        .hbr-leadspace--title span {
+            font-size: 10px;
+        }
+
+        .hbr-leadspace--description-wrap {
+            width: 100%;
+        }
+
+        /*=====================================================
+        HBR FULL BACKGROUND BANNER
+        =====================================================*/
+
+        .full-bg-banner-title {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .full-bg-banner.with-bg-inside .full-bg-banner-title {
+            margin-bottom: 16px;
+        }
+
+        .full-bg-banner-cta {
+            width: auto;
+        }
+
+        .full-bg-banner.with-bg-inside .full-bg-banner-wrapper {
+            padding: 21px 32px;
+        }
+
+        .full-bg-banner-title {
+            margin-bottom: 29px;
+        }
+
+        .full-bg-banner {
+            padding-top: 42px;
+            padding-bottom: 54px;
+            margin-top: 80px;
+        }
+
+        .full-bg-banner.with-bg-inside {
+            margin-top: 15px;
+            margin-bottom: 80px;
+        }
+    }
+
+
+
+
+/*==============================================
+    MOBILE SCREEN DEVICES
+==============================================*/
+
+@media screen and (max-width: 767px) {
+
+    .hbr .container {
+        padding: 0 25px;
+    }
+
+    /*=====================================================
+    HBR SUB NAVIGATION STYLES
+    =====================================================*/
+
+    .hbr-sub-navigation .container {
+        padding: 0 20px;
+    }
+
+    .hbr-sub-navigation__links ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-right: -20px;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .hbr-sub-navigation__links ul li {
+        flex: 0 0 auto;
+    }
+
+    .hbr-sub-navigation__links ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hbr-sub-navigation__links ul li:not(:last-child) {
+        margin-right: 16px;
+    }
+
+    .hbr-sub-navigation__links ul {
+        justify-content: flex-start;
+        padding-right: 20px;
+    }
+
+
+    /*=====================================================
+        HBR IMAGE TEXT MODULE STYLES
+    =====================================================*/
+
+    .hbr-image-text-module__inner .thumbnail-img {
+        flex-basis: 100%;
+        margin-bottom: 16px;
+    }
+
+    .hbr-image-text-module__inner .thumbnail-img img {
+        aspect-ratio: 324/96;
+    }
+
+    .hbr-image-text-module__inner .content {
+        flex-basis: 100%;
+    }
+
+    .hbr-image-text-module__inner .content h2 {
+        max-width: 100%;
+        font-size: 56px;
+        line-height: 60px;
+        letter-spacing: -2.8px;
+        margin-bottom: 16px;
+    }
+
+    .hbr-image-text-module__inner .content p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    /*=====================================================
+        HBR IMAGE CARD WITH TEXT STYLES
+    =====================================================*/
+
+    .hbr-image-card-with-text {
+        padding-top: 64px;
+    }
+
+    .card-featured-post__thumbnail img,
+    .hbr-image-card-with-text__inner .column-right .card-featured-post__thumbnail img {
+        aspect-ratio: 324/202;
+    }
+
+    .hbr-image-card-with-text__inner .column-left {
+        margin-bottom: 15px;
+    }
+
+    .hbr-image-card-with-text__inner {
+        flex-direction: column;
+    }
+
+    .card-featured-post__content {
+        padding: 24px 16px;
+    }
+
+    .hbr-image-card-with-text__inner .column-right .card-featured-post__content {
+        width: 100%;
+    }
+
+    .card-featured-post .play-icon {
+        top: 24px;
+        left: 16px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .card-featured-post__content h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .card-featured-post__content p {
+        display: none;
+    }
+
+
+    /*=====================================================
+        HBR TEXT MODULE SPONSORED STYLES
+    =====================================================*/
+
+    .hbr-text-module-sponsored {
+        padding-top: 16px;
+    }
+
+    .hbr-text-module-sponsored__inner .column-left {
+        margin-bottom: 16px;
+    }
+
+    .card-sponsored {
+        aspect-ratio: 324/96;
+        padding: 16px;
+    }
+
+    .card-sponsored__thumbnail img {
+        aspect-ratio: 324/96;
+    }
+
+    .card-sponsored .card-sponsored__content h3 {
+        max-width: 100%;
+        margin-bottom: 4px;
+        font-size: 26px;
+        line-height: 32px;
+        padding-right: 40px;
+    }
+
+    .hbr-text-module-sponsored__thumbnail img {
+        aspect-ratio: 324/270;
+    }
+
+    .card-sponsored .card-sponsored__content p {
+        line-height: 18px;
+    }
+
+    .card-sponsored__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        background: none;
+    }
+
+    .card-sponsored__btn svg {
+        display: block;
+    }
+
+    .card-sponsored__btn--text {
+        display: none;
+    }
+
+    
+    /*=====================================================
+        HBR Leadspace
+    =====================================================*/
+
+    .hbr-leadspace {
+        margin-bottom: 64px;
+    }
+
+    .hbr-leadspace--title h1 {
+        font-size: 40px;
+        margin-bottom: 24px;
+    }
+    
+    .hbr-leadspace--title {
+            margin-bottom: 80px;
+    }
+    
+    .hbr-leadspace--description-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .hbr-leadspace--description {
+        font-size: 14px;
+        line-height: 1.57;
+    }
+    
+    /*=====================================================
+        HBR FULL BACKGROUND BANNER
+    =====================================================*/
+    
+    .full-bg-banner h2,
+    .full-bg-banner .h2 {
+        font-size: 26px;
+    }
+
+    .full-bg-banner.with-bg-inside {
+        margin-top: 12px;
+        margin-bottom: 84px;
+    }
+    
+    .full-bg-banner.with-bg-inside .full-bg-banner-wrapper {
+            padding: 16px;
+    }
+    
+    .with-bg-inside .full-bg-banner-title {
+        width: 70%
+    }
+    
+    .hbr .btn.with-arrow .btn-text{
+        display: none;
+    }
+    
+    .hbr .btn .icon {
+        margin-left: 0;
+    }
+    
+    .hbr .btn .icon {
+        width: 10px;
+    }
+    
+    .hbr .btn.with-arrow {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .full-bg-banner.with-bg-inside .full-bg-banner-wrapper {
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .full-bg-banner.with-bg-inside .full-bg-banner-title {
+         margin-bottom: 0;
+    }
+    
+    .full-bg-banner {
+        padding-top: 54px;
+        padding-bottom: 54px;
+    }
+    
+    .full-bg-banner-title {
+        margin-bottom: 24px;
+    }
+
+    .hbr .icon-mobile {
+        display: block;
+    }
+
+    .hbr .btn .icon {
+        display: none;
+    }
+
+    .hbr .full-bg-banner.with-bg-inside .btn.btn-green {
+        background: transparent;
+    }
+
+    .hbr .full-bg-banner.with-bg-inside .btn.btn-green:hover {
+        background: transparent;
+    }
+}

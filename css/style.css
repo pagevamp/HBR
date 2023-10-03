@@ -1,0 +1,699 @@
+/*  
+    Theme Name: Harvard Business Review
+    Version: 1.0
+    Technology Used: Custom CSS
+    Designer/Developer: Saugat Shrestha
+*/
+
+/*=====================================================
+IMPORTING FONTS
+=====================================================*/
+
+@font-face {
+    font-family: 'GT America Trial';
+    src: url('../fonts/GTAmericaTrial-Lt.woff2') format('woff2'),
+        url('../fonts/GTAmericaTrial-Lt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT America Trial';
+    src: url('../fonts/GTAmericaTrial-Rg.woff2') format('woff2'),
+        url('../fonts/GTAmericaTrial-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT America Trial';
+    src: url('../fonts/GTAmericaTrial-Bd.woff2') format('woff2'),
+        url('../fonts/GTAmericaTrial-Bd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '72';
+    src: url('../fonts/72-Light.woff2') format('woff2'),
+        url('../fonts/72-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '72';
+    src: url('../fonts/72-Regular.woff2') format('woff2'),
+        url('../fonts/72-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '72';
+    src: url('../fonts/72-Semibold.woff2') format('woff2'),
+        url('../fonts/72-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '72';
+    src: url('../fonts/72-Bold.woff2') format('woff2'),
+        url('../fonts/72-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*=====================================================
+GLOBAL STYLES / UTILITY CLASSES
+=====================================================*/
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hbr {
+    font-family: 'GT America Trial';
+    font-size: 20px;
+    line-height: 32px;
+    background: #000;
+}
+
+.hbr h1,
+.hbr h2,
+.hbr h3,
+.hbr h4,
+.hbr h5,
+.hbr h6 {
+    margin: 0;
+}
+
+.hbr p {
+    margin: 0;
+}
+
+.hbr ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.hbr a {
+    text-decoration: none;
+}
+
+.hbr figure {
+    margin: 0;
+}
+
+.hbr img {
+    max-width: 100%;
+    display: block;
+}
+
+.hbr .container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.font-gtamerica {
+    font-family: 'GT America Trial';
+}
+
+.font-72 {
+    font-family: '72';
+}
+
+/*=====================================================
+HBR SUB NAVIGATION STYLES
+=====================================================*/
+
+.hbr-sub-navigation {
+    padding: 10px 0;
+    background: #fff;
+}
+
+.hbr-sub-navigation .container {
+    max-width: 1290px;
+}
+
+.hbr-sub-navigation__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hbr-sub-navigation__logo {
+    width: 82px;
+}
+
+.hbr-sub-navigation__links {
+    width: calc(100% - 184px);
+    padding-left: 20px;
+}
+
+.hbr-sub-navigation__links ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hbr-sub-navigation__links ul li:not(:last-child) {
+    margin-right: 22px;
+}
+
+.hbr-sub-navigation__links ul li a {
+    display: block;
+    color: #000000;
+    letter-spacing: 0.48px;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+/*=====================================================
+HBR Leadspace
+=====================================================*/
+
+.hbr-leadspace {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: #000;
+    color: #fff;
+    min-height: 652px;
+    background-position-y: -100px;
+    background: #000;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 66px;
+}
+
+.hbr-leadspace::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
+    z-index: -1;
+}
+
+.hbr-leadspace--eyebrow {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 24px; 
+    line-height: 1;
+}
+
+.hbr-leadspace--title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: '72';    
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 48px;    
+}
+
+.hbr-leadspace--title h1 {
+    margin: 0;
+    flex: 1 0;
+    font-size: 80px;
+}
+
+.hbr-leadspace--title a {
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'GT America Trial';
+    color: #fff;
+    border-radius: 50%;
+    width: 136px;
+    height: 136px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4285;
+    background: rgba(0,42,94,0.94);
+    margin-left: 50px;
+    transition: background 0.3s ease,
+                opacity 0.3s ease;}
+
+.hbr-leadspace--title a:hover {
+        background: rgba(0,96,214,0.94);
+}
+
+.hbr-leadspace--title a svg {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hbr-leadspace--title a svg path{
+    fill:#0060D6;
+}
+
+.hbr-leadspace--title span {
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+}
+
+.hbr-leadspace--description-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 2;
+    margin-bottom: 16px;
+}
+
+.hbr-leadspace--description {
+    color: #F5F5F5;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.hbr-leadspace--description-wrap {
+    width: 60%;
+}
+
+.hbr-leadspace figure {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.hbr-leadspace figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/*=====================================================
+HBR IMAGE TEXT MODULE STYLES
+=====================================================*/
+
+.hbr-image-text-module {
+    background: #000000;
+    padding: 32px 0 0;
+}
+
+.hbr-image-text-module__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -21px;
+}
+
+.hbr-image-text-module--reverse .hbr-image-text-module__inner {
+    flex-direction: row-reverse;
+}
+
+.hbr-image-text-module__inner .thumbnail-img {
+    flex-basis: 34%;
+    padding: 0 21px;
+}
+
+.hbr-image-text-module__inner .thumbnail-img img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 370/456;
+}
+
+.hbr-image-text-module__inner .content {
+    flex-basis: 66%;
+    padding: 0 21px;
+    color: #ffffff;
+}
+
+.hbr-image-text-module__inner .content h2 {
+    font-size: 120px;
+    line-height: 1;
+    margin-bottom: 24px;
+    max-width: 550px;
+    letter-spacing: -6px;
+}
+
+.hbr-image-text-module__inner .content p {
+    color: #ABABAB;
+    font-weight: 300;
+}
+
+/*=====================================================
+HBR IMAGE CARD WITH TEXT STYLES
+=====================================================*/
+
+.hbr-image-card-with-text {
+    background: #000;
+    padding-top: 32px;
+}
+
+.hbr-image-card-with-text__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.hbr-image-card-with-text__inner .column-left {
+    flex-basis: 33.4%;
+    padding: 0 15px;
+}
+
+.hbr-image-card-with-text__inner .column-right {
+    flex-basis: 66.6%;
+    padding: 0 15px;
+}
+
+.card-featured-post > a {
+    display: block;
+    position: relative;
+    color: #ffffff;
+}
+
+.card-featured-post > a::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20.17%, #000 100%);
+}
+
+.card-featured-post > a:hover .card-featured-post__thumbnail img {
+    transform: scale(1.2,1.2);
+}
+
+.card-featured-post__thumbnail {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.card-featured-post__thumbnail img {
+    aspect-ratio: 370/420;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.card-featured-post__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px 32px;
+    z-index: 2;
+}
+
+.card-featured-post__content h3 {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.card-featured-post__content p {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.hbr-image-card-with-text__inner .column-right .card-featured-post__content {
+    width: 69%;
+}
+
+.hbr-image-card-with-text__inner .column-right .card-featured-post__thumbnail img {
+    aspect-ratio: 770/420;
+}
+
+.card-featured-post__meta {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 0 -7px 8px !important;
+}
+
+.card-featured-post__meta li {
+    padding: 0 7px;
+}
+
+.card-featured-post__meta li svg {
+    position: relative;
+    top: 4px;
+}
+
+.card-featured-post .play-icon {
+    position: absolute;
+    top: 38px;
+    left: 32px;
+    width: 91px;
+    height: 91px;
+}
+
+.card-featured-post .play-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*=====================================================
+HBR TEXT MODULE SPONSORED STYLES
+=====================================================*/
+
+.hbr-text-module-sponsored {
+    background: #000;
+    padding-top: 25px;
+}
+
+.hbr-text-module-sponsored__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner {
+    flex-direction: row-reverse;
+}
+
+.hbr-text-module-sponsored__inner .column-left {
+    flex-basis: 65.8%;
+    padding: 0 15px;
+}
+
+.hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner .column-left {
+    flex-basis: 66.7%;
+}
+
+.hbr-text-module-sponsored__inner .column-right {
+    flex-basis: 34.2%;
+    padding: 0 15px;
+}
+
+.hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner .column-right {
+    flex-basis: 33.3%;
+}
+
+.hbr-text-module-sponsored__thumbnail img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    aspect-ratio: 770/405;
+}
+
+.card-sponsored {
+    position: relative;
+    padding: 48px 42px;
+    min-height: 100%;
+}
+
+.card-sponsored__thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-sponsored__thumbnail img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 369/404;
+}
+
+.card-sponsored .card-sponsored__content {
+    position: relative;
+    color: #ffffff;
+    max-height: 100%;
+}
+
+.card-sponsored .card-sponsored__content h3 {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    max-width: 100px;
+}
+
+.card-sponsored .card-sponsored__content p {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+    max-width: 256px;
+    margin-bottom: 32px;
+}
+
+.card-sponsored__btn {
+    background: #ffffff;
+    padding: 12px 42px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    border-radius: 8px;
+    font-family: '72';
+}
+
+.card-sponsored__btn--blue {
+    background: #4192F6;
+    color: #ffffff;
+}
+
+.card-sponsored__btn svg  {
+    display: none;
+}
+
+/*=====================================================
+HBR FULL BACKGROUND BANNER
+=====================================================*/
+.full-bg-banner {
+    background: #E2EBF2;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    text-transform: uppercase;   
+    transition: background 0.3s ease;
+    margin-top: 160px;
+}
+
+.full-bg-banner.with-bg-inside .full-bg-banner-wrapper {
+    background: #2A73E9;
+    transition: background 0.3s ease; 
+
+}
+
+.full-bg-banner.with-bg-inside .full-bg-banner-wrapper:hover {
+    background: #2142A2;
+}
+
+.full-bg-banner.with-bg-inside {
+    color: #fff;
+    background: #000;
+    padding: 0;
+    margin-top: 27px;
+    margin-bottom: 160px;
+}
+
+.full-bg-banner.with-bg-inside:hover {
+    background: #000;
+}
+.full-bg-banner.with-bg-inside .full-bg-banner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 48px;
+}
+.full-bg-banner.with-bg-inside .container {
+    display: block;
+}
+
+.full-bg-banner:hover {
+    background: #B1C4D2;
+}
+.full-bg-banner h2,
+.full-bg-banner .h2 {
+        margin: 0;
+        letter-spacing: -0.48px;
+        line-height: 1.083;
+        font-size: 48px;
+    }
+
+.full-bg-banner .container {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.full-bg-banner-title {
+    width: 70%;
+    padding-right: 30px;
+    font-weight: 900;
+}
+
+.full-bg-banner-cta {
+    width: 30%;
+    text-align: right;
+}
+
+.hbr .btn {
+    display: inline-block;    
+    vertical-align: top;    
+    color: #000;
+    border-radius: 8px;
+    font-family: '72';
+    padding: 12px 42px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.3s ease; 
+}
+
+.hbr .btn.btn-green {
+    background: #6ADCBF;
+}
+
+.hbr .btn.btn-green:hover {
+    background: #46AC92;
+}
+
+.hbr .btn .icon {
+    margin-left: 33px;
+}
+
+.hbr .icon-mobile {
+    display: none;
+}
+
+.intersection-opacity {
+    opacity: 0.10;
+    transition: opacity 0.3s ease-in;
+}
+.intersection-opacity.opacity-active {
+    opacity: 1;
+}
