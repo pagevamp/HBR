@@ -471,7 +471,7 @@ HBR IMAGE CARD WITH TEXT STYLES
     transform: scale(1.1,1.1);
 }
 .card-featured-post > a:hover::before {
-   transform: scaleY(2) translateY(-25%); 
+   transform: scaleY(2) translateY(calc(-25% + 2px)); 
 }
 
 .card-featured-post__thumbnail {
