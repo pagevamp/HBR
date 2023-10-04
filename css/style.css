@@ -643,6 +643,11 @@ HBR TEXT MODULE SPONSORED STYLES
     color: #000000;
     border-radius: 8px;
     font-family: '72';
+    transition: background 0.3s ease;
+}
+
+.card-sponsored__btn:hover {
+    background: #B1c4D2;
 }
 
 .card-sponsored__btn--blue {
