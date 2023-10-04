@@ -78,6 +78,9 @@ GLOBAL STYLES / UTILITY CLASSES
 
 body {
     margin: 0;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 
 html {
@@ -776,7 +779,7 @@ HBR FULL BACKGROUND BANNER
 /*=====================================================
 ADS
 =====================================================*/
-.ads {
+.ads-conternt {
     margin: 160px auto;
     max-width: 970px;
     height: 90px;
