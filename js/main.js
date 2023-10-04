@@ -1,3 +1,4 @@
+// HBR leadspace parallax
 function handleIntersect(entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -22,34 +23,36 @@ function handleIntersect(entries, observer) {
 
 const observer = new IntersectionObserver(handleIntersect, options);
 const parallaxSection = document.querySelector('.hbr-leadspace');
+const imageSection = document.querySelector('.hbr-leadspace-bg-image');
 observer.observe(parallaxSection);
 const initialPosition = '-100px';
-parallaxSection.style.backgroundPositionY = initialPosition;
+imageSection.style.backgroundPositionY = initialPosition;
 window.addEventListener('scroll', function() {
-    const parallaxImages = document.querySelectorAll('.parallax-active.hbr-leadspace');
+    const parallaxImages = document.querySelectorAll('.parallax-active .hbr-leadspace-bg-image');
     const scrolled = window.scrollY;
   
     parallaxImages.forEach(image => { 
+      console.log('image found')
         let positionY = - scrolled;
         if(positionY < -99 && positionY > -300) {
-            parallaxSection.style.backgroundPositionY = - scrolled * 1.2 + 'px';
+          image.style.backgroundPositionY = - scrolled * 1.2 + 'px';
         }
     });
   });
+
+  // add opacty on intersecting
 
   function handleIntersectOpacity(entries, observerOpacity) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('opacity-active');
-      } else {
-        entry.target.classList.remove('opacity-active');
-      }
+      } 
     });
   }
 
   const optionsOpacity = {
     root: null,
-    rootMargin: '500px',
+    rootMargin: '0px 0px -20% 0px',
     threshold: 0
   };
 
@@ -60,3 +63,97 @@ window.addEventListener('scroll', function() {
   opacitySection.forEach(obs => {
     observerOpacity.observe(obs);
   })
+
+// sub nav and scroll section active
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.hbr-sub-navigation ul li a');
+
+const optionsSection = {
+    root: null,
+    rootMargin: '-80% 0px -20% 0px',
+    threshold: 0, // Adjust this threshold as needed
+};
+
+function handleIntersectionSection(entries, observerSection) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log('section');
+            // Find the corresponding link and add the "active" class
+            const sectionId = entry.target.getAttribute('id');
+            navLinks.forEach((link) => {
+              console.log('inside section');
+                if (link.getAttribute('href') == `#${sectionId}`) {
+                  console.log('deep inside');
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    });
+}
+
+const observerSection = new IntersectionObserver(handleIntersectionSection, optionsSection);
+
+sections.forEach((section) => {
+  observerSection.observe(section);
+});
+
+// Add a click event listener to the links
+navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        const sectionId = link.getAttribute('href').substring(1); // Remove the "#" symbol
+        const section = document.getElementById(sectionId);      
+        
+        section.scrollIntoView({ behavior: 'smooth' });
+      
+        // Add the "active" class to the clicked link and remove it from others
+        navLinks.forEach((navLink) => {
+            if (navLink === link) {
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
+        });
+    });
+});
+
+// HBR title reveal on scroll
+
+let optionsSpan = {
+  root: null,
+  rootMargin: "0px 0px -40% 0px",
+  threshold: 0,
+};
+
+// for staggering
+// let callback = (entries, observer) => {
+//   entries.forEach((entry, index) => {
+//     if(entry.isIntersecting) {
+//       setTimeout(() => {
+//         entry.target.classList.add('animate'); 
+//       }, index * 100)
+//     }
+//   });
+// };
+
+//no stagger effect
+let handleIntersectionSpan = (entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting) {      
+      let span = entry.target.querySelector('span');
+      span.classList.add('animate');
+
+      observerSpan.unobserve(entry.target);
+    }
+  });
+};
+
+
+let targets = document.querySelectorAll(".word");
+let observerSpan = new IntersectionObserver(handleIntersectionSpan, optionsSpan);
+
+targets.forEach(target => {
+  observerSpan.observe(target);
+})

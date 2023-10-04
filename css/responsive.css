@@ -141,6 +141,7 @@
 
         .hbr-leadspace {
             margin-bottom: 121px;
+
         }
         .hbr-leadspace--eyebrow {
             font-size: 14px;
@@ -306,7 +307,7 @@
     }
 
     .hbr-image-card-with-text__inner {
-        flex-direction: column;
+        display: block;
     }
 
     .card-featured-post__content {
@@ -355,6 +356,10 @@
         aspect-ratio: 324/96;
     }
 
+    .card-sponsored .card-sponsored__content {
+        color: #000;
+    }
+
     .card-sponsored .card-sponsored__content h3 {
         max-width: 100%;
         margin-bottom: 4px;
@@ -394,6 +399,14 @@
 
     .hbr-leadspace {
         margin-bottom: 64px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        min-height: 508px;       
+    }
+
+    .hbr-leadspace-bg-image {
+         transform: scale(2);
+        background-position-x: 65%;
     }
 
     .hbr-leadspace--title h1 {
@@ -421,7 +434,7 @@
     
     .full-bg-banner h2,
     .full-bg-banner .h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .full-bg-banner.with-bg-inside {
@@ -434,7 +447,7 @@
     }
     
     .with-bg-inside .full-bg-banner-title {
-        width: 70%
+        width: 85%
     }
     
     .hbr .btn.with-arrow .btn-text{
@@ -487,9 +500,16 @@
 
     .hbr .full-bg-banner.with-bg-inside .btn.btn-green {
         background: transparent;
+        min-width: auto;
     }
 
     .hbr .full-bg-banner.with-bg-inside .btn.btn-green:hover {
         background: transparent;
+    }
+
+    .ads {
+        height: 50px;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
 }
