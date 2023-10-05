@@ -52,7 +52,7 @@ window.addEventListener('scroll', function() {
 
   const optionsOpacity = {
     root: null,
-    rootMargin: '0px 0px -15% 0px',
+    rootMargin: '0px 0px -18% 0px',
     threshold: 0
   };
 
