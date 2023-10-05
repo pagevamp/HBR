@@ -213,6 +213,10 @@
             margin-top: 15px;
             margin-bottom: 80px;
         }
+
+        .full-bg-banner.with-bg-inside .full-bg-banner-title {
+            width: 100%;
+        }
     }
 
 

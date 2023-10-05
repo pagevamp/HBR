@@ -245,7 +245,7 @@ HBR Leadspace
     right: 0;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
     z-index: -1;
-    transform: scaleY(2.3) rotate(90deg);
+    transform: scale(2.3) rotate(90deg);
 }
 
 .hbr-leadspace-bg-image {
