@@ -183,7 +183,7 @@
         =====================================================*/
 
         .full-bg-banner-title {
-            width: 100%;
+            width: 75%;
             padding-right: 0;
         }
 
@@ -517,9 +517,17 @@
         background: transparent;
     }
 
+    .full-bg-banner.with-bg-inside .full-bg-banner-title {
+        width: 80%;
+    }
+
     .ads-conternt {
         height: 50px;
         margin-top: 80px;
         margin-bottom: 80px;
+    }
+
+    .hbr .btn {
+        padding: 9px 17px;
     }
 }

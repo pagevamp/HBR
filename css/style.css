@@ -680,6 +680,10 @@ HBR FULL BACKGROUND BANNER
 
 }
 
+.full-bg-banner.with-bg-inside .full-bg-banner-title{
+    width: 73%;
+}
+
 .full-bg-banner.with-bg-inside .full-bg-banner-wrapper:hover {
     background: #2142A2;
 }
@@ -723,7 +727,7 @@ HBR FULL BACKGROUND BANNER
 }
 
 .full-bg-banner-title {
-    width: 73%;
+    width: 69%;
     padding-right: 15px;
     font-weight: 900;
 }
