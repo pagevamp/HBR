@@ -40,6 +40,10 @@
         HBR IMAGE TEXT MODULE STYLES
     =====================================================*/
 
+    .hbr-image-text-module {
+        padding: 0;
+    }
+
     .hbr-image-text-module__inner {
         margin: 0 -10px;
     }
@@ -399,10 +403,9 @@
     =====================================================*/
 
     .hbr-leadspace {
-        margin-bottom: 64px;
+        margin-bottom: 0;
         padding-top: 48px;
         padding-bottom: 48px;
-        min-height: 508px;       
     }
 
     .hbr-leadspace-bg-image {
@@ -427,6 +430,12 @@
     .hbr-leadspace--description {
         font-size: 14px;
         line-height: 1.57;
+    }
+
+    .hbr-leadspace figure {
+        left: -115%;
+        top: -10%;
+        height: 100%;
     }
     
     /*=====================================================

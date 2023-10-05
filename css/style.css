@@ -228,12 +228,12 @@ HBR Leadspace
     z-index: 1;
     background: #000;
     color: #fff;
-    min-height: 652px;
+    min-height: 100dvh;
     background-position-y: -100px;
     background: #000;
     padding-top: 25px;
     padding-bottom: 25px;    
-    margin-bottom: 66px;
+    margin-bottom: 34px;
 }
 
 .hbr-leadspace::before {
