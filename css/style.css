@@ -226,7 +226,7 @@ HBR Leadspace
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background: #000;
+    background: #D9D9D9 important;
     color: #fff;
     min-height: 100dvh;
     background-position-y: -100px;
@@ -243,9 +243,9 @@ HBR Leadspace
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
     z-index: -1;
-    transform: scaleY(2.3);
+    transform: scaleY(2.3) rotate(90deg);
 }
 
 .hbr-leadspace-bg-image {
@@ -748,6 +748,7 @@ HBR FULL BACKGROUND BANNER
     padding: 10px 17px;
     font-size: 14px;
     font-weight: 700;
+    line-height: 1.5;
     transition: background 0.3s ease; 
 }
 
