@@ -52,7 +52,7 @@ window.addEventListener('scroll', function() {
 
   const optionsOpacity = {
     root: null,
-    rootMargin: '0px 0px -20% 0px',
+    rootMargin: '0px 0px -15% 0px',
     threshold: 0
   };
 
@@ -120,7 +120,7 @@ navLinks.forEach((link) => {
 
 let optionsSpan = {
   root: null,
-  rootMargin: "0px 0px -40% 0px",
+  rootMargin: "0px 0px -20% 0px",
   threshold: 0,
 };
 
