@@ -70,7 +70,7 @@ const navLinks = document.querySelectorAll('.hbr-sub-navigation ul li a');
 
 const optionsSection = {
     root: null,
-    rootMargin: '-80% 0px -20% 0px',
+    rootMargin: '-80% 0px -10% 0px',
     threshold: 0, // Adjust this threshold as needed
 };
 
