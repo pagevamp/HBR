@@ -77,13 +77,10 @@ const optionsSection = {
 function handleIntersectionSection(entries, observerSection) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log('section');
             // Find the corresponding link and add the "active" class
             const sectionId = entry.target.getAttribute('id');
             navLinks.forEach((link) => {
-              console.log('inside section');
                 if (link.getAttribute('href') == `#${sectionId}`) {
-                  console.log('deep inside');
                     link.classList.add('active');
                 } else {
                     link.classList.remove('active');
