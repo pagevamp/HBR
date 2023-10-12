@@ -1,44 +1,44 @@
-// HBR leadspace parallax
-function handleIntersect(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('parallax-active');
-      } else {
-        entry.target.classList.remove('parallax-active');
-      }
-    });
-  }
+// // HBR leadspace parallax
+// function handleIntersect(entries, observer) {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add('parallax-active');
+//       } else {
+//         entry.target.classList.remove('parallax-active');
+//       }
+//     });
+//   }
   
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0
-  };
+//   const options = {
+//     root: null,
+//     rootMargin: '0px',
+//     threshold: 0
+//   };
 
-  const options1 = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0
-  };
+//   const options1 = {
+//     root: null,
+//     rootMargin: '0px',
+//     threshold: 0
+//   };
 
-const observer = new IntersectionObserver(handleIntersect, options);
-const parallaxSection = document.querySelector('.hbr-leadspace');
-const imageSection = document.querySelector('.hbr-leadspace-bg-image');
-observer.observe(parallaxSection);
-const initialPosition = '-100px';
-imageSection.style.backgroundPositionY = initialPosition;
-window.addEventListener('scroll', function() {
-    const parallaxImages = document.querySelectorAll('.parallax-active .hbr-leadspace-bg-image');
-    const scrolled = window.scrollY;
+// const observer = new IntersectionObserver(handleIntersect, options);
+// const parallaxSection = document.querySelector('.hbr-leadspace');
+// const imageSection = document.querySelector('.hbr-leadspace-bg-image');
+// observer.observe(parallaxSection);
+// const initialPosition = '-100px';
+// imageSection.style.backgroundPositionY = initialPosition;
+// window.addEventListener('scroll', function() {
+//     const parallaxImages = document.querySelectorAll('.parallax-active .hbr-leadspace-bg-image');
+//     const scrolled = window.scrollY;
   
-    parallaxImages.forEach(image => { 
-      console.log('image found')
-        let positionY = - scrolled;
-        if(positionY < -99 && positionY > -300) {
-          image.style.backgroundPositionY = - scrolled * 1.2 + 'px';
-        }
-    });
-  });
+//     parallaxImages.forEach(image => { 
+//       console.log('image found')
+//         let positionY = - scrolled;
+//         if(positionY < -99 && positionY > -300) {
+//           image.style.backgroundPositionY = - scrolled * 1.2 + 'px';
+//         }
+//     });
+//   });
 
   // add opacty on intersecting
 
@@ -154,3 +154,25 @@ let observerSpan = new IntersectionObserver(handleIntersectionSpan, optionsSpan)
 targets.forEach(target => {
   observerSpan.observe(target);
 })
+
+let length = document.querySelectorAll(".hbr-leadspace-bg-image figure path");
+
+if(length) {
+  for(let i = 0; i<length.length; i++){
+  console.log(`Letter ${i} is ${length[i].getTotalLength()}`)
+}
+}
+
+window.addEventListener('scroll', function () {
+  const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = window.scrollY;
+  const bodyBG = document.querySelector('.hbr-leadspace-bg-image');
+
+  // Calculate the new background position as a percentage
+  const newBackgroundPosition = (scrolled / totalScrollHeight) * 100;
+
+  // Set the background position
+  if(bodyBG) {
+    bodyBG.style.backgroundPositionY = ` ${newBackgroundPosition}%`;
+  }
+});

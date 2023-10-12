@@ -81,6 +81,7 @@ body {
     overflow-x: hidden;
     position: relative;
     width: 100%;
+    overflow-x:hidden;
 }
 
 html {
@@ -96,6 +97,7 @@ html {
     font-size: 20px;
     line-height: 32px;
     background: #000;
+    width: 100%;
 }
 
 .hbr h1,
@@ -222,30 +224,30 @@ HBR Leadspace
 
 .hbr-leadspace {
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background: #D9D9D9 !important;
     color: #fff;
-    min-height: 100vh;
-    background-position-y: -100px;
-    background: #000;
     padding-top: 25px;
     padding-bottom: 25px;    
-    margin-bottom: 34px;
+    padding-bottom: 34px;
+}
+.hbr-section-overlay {
+    position: relative;
+    z-index: 1;
 }
 
-.hbr-leadspace::before {
+.hbr-section-overlay::before {
     position: absolute;
     content: '';
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
     z-index: -1;
-    transform: scale(2.3) rotate(90deg);
 }
 
 .hbr-leadspace-bg-image {
@@ -257,7 +259,10 @@ HBR Leadspace
     width: 100%;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: 1;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position-y: 75px;
 }
 
 .hbr-leadspace--eyebrow {
@@ -285,48 +290,8 @@ HBR Leadspace
     font-size: 80px;
 }
 
-.hbr-leadspace--title a {
-    position: relative;
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'GT America Trial';
-    color: #fff;
-    border-radius: 50%;
-    width: 136px;
-    height: 136px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.4285;
-    background: rgba(0,42,94,0.94);
-    margin-left: 50px;
-    transition: background 0.3s ease,
-                opacity 0.3s ease;}
 
-.hbr-leadspace--title a:hover {
-        background: rgba(0,96,214,0.94);
-}
-
-.hbr-leadspace--title a svg {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.hbr-leadspace--title a svg path{
-    fill:#0060D6;
-}
-
-.hbr-leadspace--title span {
-    position: relative;
-    z-index: 2;
-    font-size: 14px;
-}
-
-.hbr-leadspace--description-title {
+.hbr-leadspace .message-title {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 900;
@@ -334,11 +299,18 @@ HBR Leadspace
     margin-bottom: 16px;
 }
 
-.hbr-leadspace--description {
+.hbr-leadspace-top-content {
+    min-height: 400px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.message-cards p{
     color: #F5F5F5;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
+    margin-bottom: 40px;
 }
 
 .hbr-leadspace--description-wrap {
@@ -356,12 +328,18 @@ HBR Leadspace
     width: 100%;
     height: 100%;
 }
+
+.hbr-leadspace-bg-image figure {
+    position: fixed;
+    bottom: 16%;
+    left: 0;
+    width: 100%;
+}
 /*=====================================================
 HBR IMAGE TEXT MODULE STYLES
 =====================================================*/
 
 .hbr-image-text-module {
-    background: #000000;
     padding: 32px 0 0;    
 }
 
@@ -385,7 +363,7 @@ HBR IMAGE TEXT MODULE STYLES
 .hbr-image-text-module__inner {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -21px;
+    margin: 0 -15px;
 }
 
 .hbr-image-text-module--reverse .hbr-image-text-module__inner {
@@ -394,7 +372,7 @@ HBR IMAGE TEXT MODULE STYLES
 
 .hbr-image-text-module__inner .thumbnail-img {
     flex-basis: 34%;
-    padding: 0 21px;
+    padding: 0 15px;
 }
 
 .hbr-image-text-module__inner .thumbnail-img img {
@@ -402,25 +380,50 @@ HBR IMAGE TEXT MODULE STYLES
     width: 100%;
     object-fit: cover;
     aspect-ratio: 370/456;
+    height: 100%;
 }
 
 .hbr-image-text-module__inner .content {
     flex-basis: 66%;
-    padding: 0 21px;
+    padding: 0 15px;
     color: #ffffff;
+    display: flex;
 }
 
 .hbr-image-text-module__inner .content h2 {
-    font-size: 120px;
+    font-size: 90px;
     line-height: 1;
     margin-bottom: 24px;
-    max-width: 550px;
-    letter-spacing: -6px;
+    letter-spacing: -5px;
+}
+
+.hbr-text-module-sponsored .card-featured-post__content h3 {
+    margin-bottom: 0;
+}
+
+.hbr-image-text-module__inner .content-inner-wrap {
+    border-top: 1px solid #727272;
+    border-bottom: 1px solid #727272;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 10px 0;  
 }
 
 .hbr-image-text-module__inner .content p {
     color: #ABABAB;
     font-weight: 300;
+    margin-bottom: 32px;
+}
+
+.hbr-image-text-module__inner.reverese-direction {
+    flex-direction: row-reverse;
+}
+
+.reverese-direction .content-inner-wrap {
+    padding-left: 0;
 }
 
 /*=====================================================
@@ -428,7 +431,6 @@ HBR IMAGE CARD WITH TEXT STYLES
 =====================================================*/
 
 .hbr-image-card-with-text {
-    background: #000;
     padding-top: 32px;
 }
 
@@ -436,6 +438,11 @@ HBR IMAGE CARD WITH TEXT STYLES
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+    flex-direction: row-reverse;
+}
+
+.hbr-image-card-with-text__inner.reverese-direction {
+    flex-direction: row;
 }
 
 .hbr-image-card-with-text__inner .column-left {
@@ -453,9 +460,14 @@ HBR IMAGE CARD WITH TEXT STYLES
     position: relative;
     color: #ffffff;
     overflow: hidden;
+    z-index: 1;
 }
 
-.card-featured-post > a::before {
+.card-featured-post {
+    height: 100%;
+}
+
+.card-featured-post.have-overlay > a::before {
     position: absolute;
     content: "";
     top: 0;
@@ -499,6 +511,10 @@ HBR IMAGE CARD WITH TEXT STYLES
     z-index: 2;
 }
 
+.two-col .column-middle-two .card-featured-post__content {
+    width: 70%;
+}
+
 .card-featured-post__content h3 {
     font-size: 22px;
     line-height: 32px;
@@ -535,6 +551,7 @@ HBR IMAGE CARD WITH TEXT STYLES
 .card-featured-post__meta li svg {
     position: relative;
     top: 4px;
+    margin-right: 5px;
 }
 
 .card-featured-post .play-icon {
@@ -556,7 +573,6 @@ HBR TEXT MODULE SPONSORED STYLES
 =====================================================*/
 
 .hbr-text-module-sponsored {
-    background: #000;
     padding-top: 25px;
 }
 
@@ -588,11 +604,54 @@ HBR TEXT MODULE SPONSORED STYLES
     flex-basis: 33.3%;
 }
 
+.hbr .bg-blue {
+    background: #4192F6;
+}
+
+.hbr .bg-dark-blue {
+    background: #2E58C1;
+}
+
 .hbr-text-module-sponsored__thumbnail img {
     width: 100%;
     object-fit: cover;
     height: auto;
-    aspect-ratio: 770/405;
+    aspect-ratio: 440/220;
+    height: 100%;
+}
+
+.hbr .column-left-one {
+    width: 39.2%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hbr .two-col .column-middle-two {
+    width: 60.8%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hbr .three-col .column-middle-two, 
+.hbr .three-col .column-middle-three {
+    width: 30.4%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hbr .two-col .card-featured-post.have-icon > a {
+    aspect-ratio: 698/220;
+}
+
+.hbr .three-col .card-featured-post.have-icon > a {
+    aspect-ratio: 328/220;
+}
+
+.card-featured-post__icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .card-sponsored {
@@ -647,6 +706,7 @@ HBR TEXT MODULE SPONSORED STYLES
     border-radius: 8px;
     font-family: '72';
     transition: background 0.3s ease;
+    line-height: 1.2;
 }
 
 .card-sponsored__btn:hover {
@@ -666,11 +726,15 @@ HBR TEXT MODULE SPONSORED STYLES
 HBR FULL BACKGROUND BANNER
 =====================================================*/
 .full-bg-banner {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
     background: #E2EBF2;
     padding-top: 48px;
     padding-bottom: 48px;
     text-transform: uppercase;   
-    transition: background 0.3s ease;
+    transition: background 0.3s ease,
+                opacity 0.3s ease !important;
     margin-top: 160px;
 }
 
@@ -723,7 +787,10 @@ HBR FULL BACKGROUND BANNER
 
 .full-bg-banner .container {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    z-index: 1;    
 }
 
 .full-bg-banner-title {
@@ -779,15 +846,242 @@ HBR FULL BACKGROUND BANNER
 .hbr-sap-section {
     scroll-padding-top: 75px;
     scroll-margin: 75px;
+    z-index: 1;
+    position: relative;
 }
 
+.text-blue {
+    color: #5EA9FF;
+    display: block;
+}
+
+.full-bg-banner-img {
+    position: absolute;
+    right: 22%;
+    z-index: -1;
+}
 /*=====================================================
 ADS
 =====================================================*/
+
+section.ads {
+    position: relative;
+    z-index: 1;
+}
 .ads-conternt {
     margin: 160px auto;
     max-width: 970px;
-    height: 90px;
+    height: 250px;
     background: #F9D7E7;
     width: 100%;
 }
+/*=====================================================
+Animation of lines
+=====================================================*/
+.hbr-leadspace-bg-image figure .path-1 {
+    stroke-dasharray:505.5911560058594;
+    stroke-dashoffset: 505.5911560058594;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-2 {
+    stroke-dasharray: 662.928955078125;
+    stroke-dashoffset: 662.928955078125;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-3 {
+    stroke-dasharray:295.60369873046875;
+    stroke-dashoffset: 295.60369873046875;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-4 {
+    stroke-dasharray:207.05105590820312;
+    stroke-dashoffset: 207.05105590820312;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-5 {
+    stroke-dasharray: 235.32444763183594;
+    stroke-dashoffset: 235.32444763183594;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-6 {
+    stroke-dasharray:220.89845275878906;
+    stroke-dashoffset: 220.89845275878906;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-7 {
+    stroke-dasharray:234.63880920410156;
+    stroke-dashoffset: 234.63880920410156;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-8 {
+    stroke-dasharray: 231.25498962402344;
+    stroke-dashoffset: 231.25498962402344;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-9 {
+    stroke-dasharray:1819.2205810546875;
+    stroke-dashoffset: 1819.2205810546875;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-10 {
+    stroke-dasharray:1292.0130615234375;
+    stroke-dashoffset: 1292.0130615234375;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-11 {
+    stroke-dasharray: 448.5755615234375;
+    stroke-dashoffset: 448.5755615234375;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-12 {
+    stroke-dasharray:334.1441650390625;
+    stroke-dashoffset: 334.1441650390625;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-13 {
+    stroke-dasharray:389.2127990722656;
+    stroke-dashoffset: 389.2127990722656;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-14 {
+    stroke-dasharray: 510.2290954589844;
+    stroke-dashoffset: 510.2290954589844;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-15 {
+    stroke-dasharray:370.1069641113281;
+    stroke-dashoffset: 370.1069641113281;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-16 {
+    stroke-dasharray:494.5432434082031;
+    stroke-dashoffset: 494.5432434082031;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-17 {
+    stroke-dasharray: 84.16105651855469;
+    stroke-dashoffset: 84.16105651855469;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-18 {
+    stroke-dasharray:81.72303771972656;
+    stroke-dashoffset: 81.72303771972656;
+    animation: line-aniamtion 2s infinite linear alternate;
+}
+
+.hbr-leadspace-bg-image figure .path-19 {
+    stroke-dasharray: 52.90133285522461;
+    stroke-dashoffset:  52.90133285522461;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+  .hbr-leadspace-bg-image figure .path-20 {
+    stroke-dasharray: 614.989501953125;
+    stroke-dashoffset: 614.989501953125;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+  .hbr-leadspace-bg-image figure .path-21 {
+    stroke-dasharray:330;
+    stroke-dashoffset: 330;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+
+  .hbr-leadspace-bg-image figure .path-22 {
+    stroke-dasharray:480;
+    stroke-dashoffset: 480;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+  .hbr-leadspace-bg-image figure .path-23 {
+    stroke-dasharray: 155;
+    stroke-dashoffset: 155;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+  .hbr-leadspace-bg-image figure .path-24 {
+    stroke-dasharray:245;
+    stroke-dashoffset: 245;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+
+  .hbr-leadspace-bg-image figure .path-25 {
+    stroke-dasharray:414;
+    stroke-dashoffset: 414;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+  .hbr-leadspace-bg-image figure .path-26 {
+    stroke-dasharray: 303;
+    stroke-dashoffset: 303;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+  .hbr-leadspace-bg-image figure .path-27 {
+    stroke-dasharray:229;
+    stroke-dashoffset: 229;
+    animation: line-aniamtion 2s infinite linear alternate;
+  }
+  
+  @keyframes line-aniamtion {
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .hbr-leadspace-bg-image figure .circle-1 {
+    animation: twinkle 2s 2s infinite ease alternate;    
+  }
+
+  .hbr-leadspace-bg-image figure .circle-2 {
+
+  }
+
+  .hbr-leadspace-bg-image figure .circle-3 {
+    animation: twinkle 2s 2s infinite ease alternate; 
+  }
+
+  .hbr-leadspace-bg-image figure .circle-4 {
+    animation: twinkle 4s 4s infinite ease alternate;
+  }
+
+  .hbr-leadspace-bg-image figure .circle-5 {
+    animation: twinkle 6s 6s infinite ease alternate; 
+  }
+
+  .hbr-leadspace-bg-image figure .circle-6 {
+    animation: twinkle 8s 8s infinite ease alternate;   
+  }
+
+  .hbr-leadspace-bg-image figure .circle-7 {
+    animation: twinkle 10s 10s infinite ease alternate;
+  }
+
+  .hbr-leadspace-bg-image figure .circle-8 {
+    animation: twinkle 12s 12s infinite ease alternate;        
+  }
+
+  .hbr-leadspace-bg-image figure .circle-9 {
+    animation: twinkle 14s 14s infinite ease alternate;        
+  }
+
+  @keyframes twinkle {
+    from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+  }

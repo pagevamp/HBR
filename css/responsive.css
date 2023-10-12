@@ -63,7 +63,7 @@
     }
 
     .hbr-image-text-module__inner .content h2 {
-        font-size: 60px;
+        font-size: 50px;
         line-height: 65px;
         letter-spacing: -3px;
         padding-right: 0;
@@ -133,6 +133,18 @@
     .card-sponsored__thumbnail img {
         aspect-ratio: 721/404;
     }
+
+    .three-col .card-featured-post__content h3 {
+        font-size: 16px;
+    }
+
+    .card-featured-post__icon {
+        width: 50%;
+    }
+
+    .hbr-leadspace--title {
+        margin-bottom: 0;
+    }
 }
 
     /*=====================================================
@@ -157,7 +169,6 @@
             flex: 1 0 auto;
             font-size: 68px;
             width: 100%;
-            margin-bottom: 10px;
         }
 
         .hbr-leadspace--title a {
@@ -176,6 +187,10 @@
 
         .hbr-leadspace--description-wrap {
             width: 100%;
+        }
+
+        .hbr-leadspace-bg-image figure {
+            bottom: 27%;
         }
 
         /*=====================================================
@@ -216,6 +231,50 @@
 
         .full-bg-banner.with-bg-inside .full-bg-banner-title {
             width: 100%;
+        }
+
+        .card-featured-post__content h3 {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .hbr-text-module-sponsored__inner {
+            margin: 0 -10px;
+        }
+
+        .hbr .column-left-one {
+            width: 50%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .hbr .two-col .column-middle-two {
+            width: 50%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .two-col .column-middle-two .card-featured-post__content {
+            width: 100%;
+        }
+
+        .hbr .two-col .card-featured-post.have-icon > a {
+            aspect-ratio: 698/520;
+        }
+        .full-bg-banner-img {
+            right: 0;
+        }
+
+        .card-featured-post__content {
+            padding: 10px;
+        }
+
+        .three-col .card-featured-post__content h3 {
+            font-size: 14px;
+        }
+
+        .hbr .three-col .column-left-one {
+            width: 39.2%;
         }
     }
 
@@ -266,6 +325,15 @@
         padding-right: 20px;
     }
 
+    .hbr-leadspace-bg-image figure {
+        bottom: 41%;
+    }
+
+    .hbr-leadspace-bg-image figure {
+        left: -114%;
+        width: 263%;
+    }
+
 
     /*=====================================================
         HBR IMAGE TEXT MODULE STYLES
@@ -295,6 +363,13 @@
     .hbr-image-text-module__inner .content p {
         font-size: 14px;
         line-height: 22px;
+        margin-bottom: 24px;
+    }
+
+    .hbr-image-text-module__inner .content-inner-wrap {
+        border-top: none;
+        border-bottom: none;
+        padding: 10px 0px;
     }
 
 
@@ -312,7 +387,7 @@
     }
 
     .hbr-image-card-with-text__inner .column-left {
-        margin-bottom: 15px;
+        margin-top: 15px;
     }
 
     .hbr-image-card-with-text__inner {
@@ -332,12 +407,7 @@
         left: 16px;
         width: 32px;
         height: 32px;
-    }
-
-    .card-featured-post__content h3 {
-        font-size: 16px;
-        line-height: 22px;
-    }
+    }    
 
     .card-featured-post__content p {
         display: none;
@@ -351,6 +421,20 @@
     .hbr-text-module-sponsored {
         padding-top: 16px;
     }
+
+    .hbr .two-col .card-featured-post.have-icon > a {
+        aspect-ratio: 323/202;
+    }
+
+    .hbr .column-left-one {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .hbr .two-col .column-middle-two {
+        width: 100%;
+    }
+
 
     .hbr-text-module-sponsored__inner .column-left {
         margin-bottom: 16px;
@@ -378,30 +462,32 @@
     }
 
     .hbr-text-module-sponsored__thumbnail img {
-        aspect-ratio: 324/270;
+        aspect-ratio: 324/162;
+    }
+
+    .card-featured-post__icon {
+        right: -96px;
     }
 
     .card-sponsored .card-sponsored__content p {
         line-height: 18px;
     }
 
-    .card-sponsored__btn {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0;
-        background: none;
+    .hbr .three-col .column-left-one {
+        width: 100%;
     }
 
-    .card-sponsored__btn svg {
-        display: block;
+    .hbr .three-col .column-middle-two, 
+    .hbr .three-col .column-middle-three {
+        width: 100%;
+        margin-top: 30px;
     }
 
-    .card-sponsored__btn--text {
-        display: none;
+    .hbr-image-card-with-text__inner.reverese-direction .column-left {
+        margin-top: 60px;
     }
 
-    
+     
     /*=====================================================
         HBR Leadspace
     =====================================================*/
@@ -412,18 +498,9 @@
         padding-bottom: 48px;
     }
 
-    .hbr-leadspace-bg-image {
-         transform: scale(2);
-        background-position-x: 65%;
-    }
-
     .hbr-leadspace--title h1 {
         font-size: 40px;
-        margin-bottom: 24px;
-    }
-    
-    .hbr-leadspace--title {
-            margin-bottom: 80px;
+        margin-bottom: 0;
     }
     
     .hbr-leadspace--description-title {
@@ -441,11 +518,21 @@
         top: -10%;
         height: 100%;
     }
+
+    .hbr-leadspace-top-content {
+            min-height: 2px;
+            padding-top: 76px;
+            padding-bottom: 100px;
+    }
     
     /*=====================================================
         HBR FULL BACKGROUND BANNER
     =====================================================*/
     
+    .full-bg-banner {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
     .full-bg-banner h2,
     .full-bg-banner .h2 {
         font-size: 24px;
@@ -493,12 +580,7 @@
     
     .full-bg-banner.with-bg-inside .full-bg-banner-title {
          margin-bottom: 0;
-    }
-    
-    .full-bg-banner {
-        padding-top: 54px;
-        padding-bottom: 54px;
-    }
+    }    
     
     .full-bg-banner-title {
         margin-bottom: 24px;
@@ -523,7 +605,7 @@
 
     .full-bg-banner.with-bg-inside .full-bg-banner-title {
         width: 80%;
-    }
+    }    
 
     .ads-conternt {
         height: 50px;
