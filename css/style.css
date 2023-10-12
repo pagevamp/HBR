@@ -262,7 +262,6 @@ HBR Leadspace
     z-index: 1;
     min-height: 100vh;
     background-attachment: fixed;
-    background-position-y: 75px;
 }
 
 .hbr-leadspace--eyebrow {
