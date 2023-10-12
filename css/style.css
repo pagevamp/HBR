@@ -1044,7 +1044,7 @@ Animation of lines
   }
 
   .hbr-leadspace-bg-image figure .circle-2 {
-
+    animation: twinkle 16s 16s infinite ease alternate;   
   }
 
   .hbr-leadspace-bg-image figure .circle-3 {
