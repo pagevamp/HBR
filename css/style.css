@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /*  
     Theme Name: Harvard Business Review
     Version: 1.0
@@ -81,7 +88,6 @@ body {
     overflow-x: hidden;
     position: relative;
     width: 100%;
-    overflow-x:hidden;
 }
 
 html {
@@ -89,7 +95,8 @@ html {
   }
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .hbr {
@@ -97,7 +104,7 @@ html {
     font-size: 20px;
     line-height: 32px;
     background: #000;
-    width: 100%;
+    position: relative;
 }
 
 .hbr h1,
@@ -163,9 +170,14 @@ HBR SUB NAVIGATION STYLES
 }
 
 .hbr-sub-navigation__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .hbr-sub-navigation__logo {
@@ -178,10 +190,17 @@ HBR SUB NAVIGATION STYLES
 }
 
 .hbr-sub-navigation__links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .hbr-sub-navigation__links ul li:not(:last-child) {
@@ -205,9 +224,15 @@ HBR SUB NAVIGATION STYLES
     left: 0;
     height: 1px;
     width: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#4292F6), to(#6ADCBF));
+    background: -o-linear-gradient(left, #4292F6 0%, #6ADCBF 100%);
     background: linear-gradient(90deg, #4292F6 0%, #6ADCBF 100%);
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: opacity 0.3s ease,
+                visibility 0.3s ease;
+    -o-transition: opacity 0.3s ease,
+                visibility 0.3s ease;
     transition: opacity 0.3s ease,
                 visibility 0.3s ease;
 }
@@ -223,9 +248,16 @@ HBR Leadspace
 =====================================================*/
 
 .hbr-leadspace {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -246,6 +278,8 @@ HBR Leadspace
     bottom: 0;
     left: 0;
     right: 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(4.47%, rgba(0, 0, 0, 0.00)), color-stop(77.14%, #000));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
     z-index: -1;
 }
@@ -273,9 +307,14 @@ HBR Leadspace
 }
 
 .hbr-leadspace--title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-transform: uppercase;
     font-family: '72';    
     font-weight: 700;
@@ -285,7 +324,9 @@ HBR Leadspace
 
 .hbr-leadspace--title h1 {
     margin: 0;
-    flex: 1 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0;
+            flex: 1 0;
     font-size: 80px;
 }
 
@@ -323,7 +364,8 @@ HBR Leadspace
 }
 
 .hbr-leadspace figure img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 100%;
 }
@@ -345,47 +387,67 @@ HBR IMAGE TEXT MODULE STYLES
 .hbr-image-text-module .word {
     display: inline-block;
     vertical-align: top;
-    clip-path: polygon(0 0, 104% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 104% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 104% 0, 100% 100%, 0% 100%);
 }
 
 .hbr-image-text-module .word span {
     display: inline-block;
     vertical-align: top;
-    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-out;
+    transition: -webkit-transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out;
     transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .hbr-image-text-module span.animate {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 
 .hbr-image-text-module__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin: 0 -15px;
 }
 
 .hbr-image-text-module--reverse .hbr-image-text-module__inner {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .hbr-image-text-module__inner .thumbnail-img {
-    flex-basis: 34%;
+    -ms-flex-preferred-size: 34%;
+        flex-basis: 34%;
     padding: 0 15px;
 }
 
 .hbr-image-text-module__inner .thumbnail-img img {
     height: auto;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     aspect-ratio: 370/456;
     height: 100%;
 }
 
 .hbr-image-text-module__inner .content {
-    flex-basis: 66%;
+    -ms-flex-preferred-size: 66%;
+        flex-basis: 66%;
     padding: 0 15px;
     color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -404,10 +466,19 @@ HBR IMAGE TEXT MODULE STYLES
     border-top: 1px solid #727272;
     border-bottom: 1px solid #727272;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align:start;
+        -ms-flex-align:start;
+            align-items:flex-start;
     padding: 10px 0;  
 }
 
@@ -418,7 +489,10 @@ HBR IMAGE TEXT MODULE STYLES
 }
 
 .hbr-image-text-module__inner.reverese-direction {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .reverese-direction .content-inner-wrap {
@@ -434,23 +508,34 @@ HBR IMAGE CARD WITH TEXT STYLES
 }
 
 .hbr-image-card-with-text__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin: 0 -15px;
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .hbr-image-card-with-text__inner.reverese-direction {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .hbr-image-card-with-text__inner .column-left {
-    flex-basis: 33.4%;
+    -ms-flex-preferred-size: 33.4%;
+        flex-basis: 33.4%;
     padding: 0 15px;
 }
 
 .hbr-image-card-with-text__inner .column-right {
-    flex-basis: 66.6%;
+    -ms-flex-preferred-size: 66.6%;
+        flex-basis: 66.6%;
     padding: 0 15px;
 }
 
@@ -475,17 +560,31 @@ HBR IMAGE CARD WITH TEXT STYLES
     height: 100%;
     z-index: 1;
     opacity: 0.8;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20.17%, rgba(0, 0, 0, 0.00)), to(#000));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.00) 20.17%, #000 100%);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 20.17%, #000 100%);
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
-    transform: scaleY(1) scaleX(1) translateY(0);
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transform: scaleY(1) scaleX(1) translateY(0);
+        -ms-transform: scaleY(1) scaleX(1) translateY(0);
+            transform: scaleY(1) scaleX(1) translateY(0);
 }
 
 .card-featured-post > a:hover .card-featured-post__thumbnail img {
-    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+        -ms-transform: scale(1.1,1.1);
+            transform: scale(1.1,1.1);
 }
 .card-featured-post > a:hover::before {
-   transform: scaleY(2) scaleX(1.2) translateY(calc(-25% + 2px)); 
+   -webkit-transform: scaleY(2) scaleX(1.2) translateY(calc(-25% + 2px));
+       -ms-transform: scaleY(2) scaleX(1.2) translateY(calc(-25% + 2px));
+           transform: scaleY(2) scaleX(1.2) translateY(calc(-25% + 2px)); 
 }
 
 .card-featured-post__thumbnail {
@@ -497,7 +596,10 @@ HBR IMAGE CARD WITH TEXT STYLES
 .card-featured-post__thumbnail img {
     aspect-ratio: 370/420;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -536,8 +638,12 @@ HBR IMAGE CARD WITH TEXT STYLES
 }
 
 .card-featured-post__meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 12px;
     line-height: 24px;
     margin: 0 -7px 8px !important;
@@ -576,31 +682,41 @@ HBR TEXT MODULE SPONSORED STYLES
 }
 
 .hbr-text-module-sponsored__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin: 0 -15px;
 }
 
 .hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .hbr-text-module-sponsored__inner .column-left {
-    flex-basis: 65.8%;
+    -ms-flex-preferred-size: 65.8%;
+        flex-basis: 65.8%;
     padding: 0 15px;
 }
 
 .hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner .column-left {
-    flex-basis: 66.7%;
+    -ms-flex-preferred-size: 66.7%;
+        flex-basis: 66.7%;
 }
 
 .hbr-text-module-sponsored__inner .column-right {
-    flex-basis: 34.2%;
+    -ms-flex-preferred-size: 34.2%;
+        flex-basis: 34.2%;
     padding: 0 15px;
 }
 
 .hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner .column-right {
-    flex-basis: 33.3%;
+    -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%;
 }
 
 .hbr .bg-blue {
@@ -613,7 +729,8 @@ HBR TEXT MODULE SPONSORED STYLES
 
 .hbr-text-module-sponsored__thumbnail img {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: auto;
     aspect-ratio: 440/220;
     height: 100%;
@@ -670,7 +787,8 @@ HBR TEXT MODULE SPONSORED STYLES
 
 .card-sponsored__thumbnail img {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     aspect-ratio: 369/404;
 }
 
@@ -704,6 +822,8 @@ HBR TEXT MODULE SPONSORED STYLES
     color: #000000;
     border-radius: 8px;
     font-family: '72';
+    -webkit-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
     transition: background 0.3s ease;
     line-height: 1.2;
 }
@@ -732,6 +852,10 @@ HBR FULL BACKGROUND BANNER
     padding-top: 48px;
     padding-bottom: 48px;
     text-transform: uppercase;   
+    -webkit-transition: background 0.3s ease,
+                opacity 0.3s ease !important;   
+    -o-transition: background 0.3s ease,
+                opacity 0.3s ease !important;   
     transition: background 0.3s ease,
                 opacity 0.3s ease !important;
     margin-top: 160px;
@@ -739,6 +863,8 @@ HBR FULL BACKGROUND BANNER
 
 .full-bg-banner.with-bg-inside .full-bg-banner-wrapper {
     background: #2A73E9;
+    -webkit-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
     transition: background 0.3s ease; 
 
 }
@@ -763,9 +889,14 @@ HBR FULL BACKGROUND BANNER
     background: #000;
 }
 .full-bg-banner.with-bg-inside .full-bg-banner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 48px;
 }
 .full-bg-banner.with-bg-inside .container {
@@ -785,9 +916,14 @@ HBR FULL BACKGROUND BANNER
     }
 
 .full-bg-banner .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     z-index: 1;    
 }
@@ -815,6 +951,8 @@ HBR FULL BACKGROUND BANNER
     font-size: 14px;
     font-weight: 700;
     line-height: 1.5;
+    -webkit-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
     transition: background 0.3s ease; 
 }
 
@@ -836,6 +974,8 @@ HBR FULL BACKGROUND BANNER
 
 .intersection-opacity {
     opacity: 0.10;
+    -webkit-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;
 }
 .intersection-opacity.opacity-active {
@@ -878,201 +1018,839 @@ section.ads {
 Animation of lines
 =====================================================*/
 .hbr-leadspace-bg-image figure .path-1 {
-    stroke-dasharray:505.5911560058594;
-    stroke-dashoffset: 505.5911560058594;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-1); */
+    /* stroke-dashoffset: var(--path-1); */
+    -webkit-animation: line-aniamtion-1 4s infinite normal linear;
+            animation: line-aniamtion-1 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-2 {
-    stroke-dasharray: 662.928955078125;
-    stroke-dashoffset: 662.928955078125;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-2); */
+    /* stroke-dashoffset: var(--path-2); */
+    -webkit-animation: line-aniamtion-2 4s infinite normal linear;
+            animation: line-aniamtion-2 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-3 {
-    stroke-dasharray:295.60369873046875;
-    stroke-dashoffset: 295.60369873046875;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-3); */
+    /* stroke-dashoffset: var(--path-3); */
+    -webkit-animation: line-aniamtion-3 4s infinite normal linear;
+            animation: line-aniamtion-3 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-4 {
-    stroke-dasharray:207.05105590820312;
-    stroke-dashoffset: 207.05105590820312;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-4); */
+    /* stroke-dashoffset: var(--path-4); */
+    -webkit-animation: line-aniamtion-4 4s infinite normal linear;
+            animation: line-aniamtion-4 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-5 {
-    stroke-dasharray: 235.32444763183594;
-    stroke-dashoffset: 235.32444763183594;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-5); */
+    /* stroke-dashoffset: var(--path-5); */
+    -webkit-animation: line-aniamtion-5 4s infinite normal linear;
+            animation: line-aniamtion-5 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-6 {
-    stroke-dasharray:220.89845275878906;
-    stroke-dashoffset: 220.89845275878906;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-6); */
+    /* stroke-dashoffset: var(--path-6); */
+    -webkit-animation: line-aniamtion-6 4s infinite normal linear;
+            animation: line-aniamtion-6 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-7 {
-    stroke-dasharray:234.63880920410156;
-    stroke-dashoffset: 234.63880920410156;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-7); */
+    /* stroke-dashoffset: var(--path-7); */
+    -webkit-animation: line-aniamtion-7 4s infinite normal linear;
+            animation: line-aniamtion-7 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-8 {
-    stroke-dasharray: 231.25498962402344;
-    stroke-dashoffset: 231.25498962402344;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-8); */
+    /* stroke-dashoffset: var(--path-8); */
+    -webkit-animation: line-aniamtion-8 4s infinite normal linear;
+            animation: line-aniamtion-8 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-9 {
-    stroke-dasharray:1819.2205810546875;
-    stroke-dashoffset: 1819.2205810546875;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-9); */
+    /* stroke-dashoffset: var(--path-9); */
+    -webkit-animation: line-aniamtion-9 4s infinite normal linear;
+            animation: line-aniamtion-9 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-10 {
-    stroke-dasharray:1292.0130615234375;
-    stroke-dashoffset: 1292.0130615234375;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-10); */
+    /* stroke-dashoffset: var(--path-10); */
+    -webkit-animation: line-aniamtion-10 4s infinite normal linear;
+            animation: line-aniamtion-10 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-11 {
-    stroke-dasharray: 448.5755615234375;
-    stroke-dashoffset: 448.5755615234375;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-11); */
+    /* stroke-dashoffset: var(--path-11); */
+    -webkit-animation: line-aniamtion-11 4s infinite normal linear;
+            animation: line-aniamtion-11 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-12 {
-    stroke-dasharray:334.1441650390625;
-    stroke-dashoffset: 334.1441650390625;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-12); */
+    /* stroke-dashoffset: var(--path-12); */
+    -webkit-animation: line-aniamtion-12 4s infinite normal linear;
+            animation: line-aniamtion-12 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-13 {
-    stroke-dasharray:389.2127990722656;
-    stroke-dashoffset: 389.2127990722656;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-13); */
+    /* stroke-dashoffset: var(--path-13); */
+    -webkit-animation: line-aniamtion-13 4s infinite normal linear;
+            animation: line-aniamtion-13 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-14 {
-    stroke-dasharray: 510.2290954589844;
-    stroke-dashoffset: 510.2290954589844;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-14); */
+    /* stroke-dashoffset: var(--path-14); */
+    -webkit-animation: line-aniamtion-14 4s infinite normal linear;
+            animation: line-aniamtion-14 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-15 {
-    stroke-dasharray:370.1069641113281;
-    stroke-dashoffset: 370.1069641113281;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-15); */
+    /* stroke-dashoffset: var(--path-15); */
+    -webkit-animation: line-aniamtion-15 4s infinite normal linear;
+            animation: line-aniamtion-15 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-16 {
-    stroke-dasharray:494.5432434082031;
-    stroke-dashoffset: 494.5432434082031;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-16); */
+    /* stroke-dashoffset: var(--path-16); */
+    -webkit-animation: line-aniamtion-16 4s infinite normal linear;
+            animation: line-aniamtion-16 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-17 {
-    stroke-dasharray: 84.16105651855469;
-    stroke-dashoffset: 84.16105651855469;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-17); */
+    /* stroke-dashoffset: var(--path-17); */
+    -webkit-animation: line-aniamtion-17 4s infinite normal linear;
+            animation: line-aniamtion-17 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-18 {
-    stroke-dasharray:81.72303771972656;
-    stroke-dashoffset: 81.72303771972656;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-18); */
+    /* stroke-dashoffset: var(--path-18); */
+    -webkit-animation: line-aniamtion-18 4s infinite normal linear;
+            animation: line-aniamtion-18 4s infinite normal linear;
 }
 
 .hbr-leadspace-bg-image figure .path-19 {
-    stroke-dasharray: 52.90133285522461;
-    stroke-dashoffset:  52.90133285522461;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-19); */
+    /* stroke-dashoffset:  var(--path-19); */
+    -webkit-animation: line-aniamtion-19 4s infinite normal linear;
+            animation: line-aniamtion-19 4s infinite normal linear;
   }
   .hbr-leadspace-bg-image figure .path-20 {
-    stroke-dasharray: 614.989501953125;
-    stroke-dashoffset: 614.989501953125;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-1); */
+    /* stroke-dashoffset: var(--path-1); */
+    -webkit-animation: line-aniamtion-20 4s infinite normal linear;
+            animation: line-aniamtion-20 4s infinite normal linear;
   }
   .hbr-leadspace-bg-image figure .path-21 {
-    stroke-dasharray:330;
-    stroke-dashoffset: 330;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-21); */
+    /* stroke-dashoffset: var(--path-21); */
+    -webkit-animation: line-aniamtion-21 4s infinite normal linear;
+            animation: line-aniamtion-21 4s infinite normal linear;
   }
 
   .hbr-leadspace-bg-image figure .path-22 {
-    stroke-dasharray:480;
-    stroke-dashoffset: 480;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-22); */
+    /* stroke-dashoffset: var(--path-22); */
+    -webkit-animation: line-aniamtion-22 4s infinite normal linear;
+            animation: line-aniamtion-22 4s infinite normal linear;
   }
   .hbr-leadspace-bg-image figure .path-23 {
-    stroke-dasharray: 155;
-    stroke-dashoffset: 155;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-23); */
+    /* stroke-dashoffset: var(--path-23); */
+    -webkit-animation: line-aniamtion-23 4s infinite normal linear;
+            animation: line-aniamtion-23 4s infinite normal linear;
   }
   .hbr-leadspace-bg-image figure .path-24 {
-    stroke-dasharray:245;
-    stroke-dashoffset: 245;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-24); */
+    /* stroke-dashoffset: var(--path-24); */
+    -webkit-animation: line-aniamtion-24 4s infinite normal linear;
+            animation: line-aniamtion-24 4s infinite normal linear;
   }
 
   .hbr-leadspace-bg-image figure .path-25 {
-    stroke-dasharray:414;
-    stroke-dashoffset: 414;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-25); */
+    /* stroke-dashoffset: var(--path-25); */
+    -webkit-animation: line-aniamtion-25 4s infinite normal linear;
+            animation: line-aniamtion-25 4s infinite normal linear;
   }
   .hbr-leadspace-bg-image figure .path-26 {
-    stroke-dasharray: 303;
-    stroke-dashoffset: 303;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray: var(--path-26); */
+    /* stroke-dashoffset: var(--path-26); */
+    -webkit-animation: line-aniamtion-26 4s infinite normal linear;
+            animation: line-aniamtion-26 4s infinite normal linear;
   }
   .hbr-leadspace-bg-image figure .path-27 {
-    stroke-dasharray:229;
-    stroke-dashoffset: 229;
-    animation: line-aniamtion 2s infinite linear alternate;
+    /* stroke-dasharray:var(--path-27); */
+    /* stroke-dashoffset: var(--path-27); */
+    -webkit-animation: line-aniamtion-27 4s infinite normal linear;
+            animation: line-aniamtion-27 4s infinite normal linear;
   }
   
-  @keyframes line-aniamtion {
-    to{
-      stroke-dashoffset: 0;
+  @-webkit-keyframes line-aniamtion-1 {
+    0% {
+        stroke-dasharray: var(--path-1);
+        stroke-dashoffset: var(--path-1);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-1);
+    }
+  }
+  
+  @keyframes line-aniamtion-1 {
+    0% {
+        stroke-dasharray: var(--path-1);
+        stroke-dashoffset: var(--path-1);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-1);
+    }
+  }
+
+  @-webkit-keyframes line-aniamtion-2 {
+    0% {
+        stroke-dasharray: var(--path-2);
+        stroke-dashoffset: var(--path-2);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-2);
+    }
+  }
+
+  @keyframes line-aniamtion-2 {
+    0% {
+        stroke-dasharray: var(--path-2);
+        stroke-dashoffset: var(--path-2);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-2);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-3 {
+    0% {
+        stroke-dasharray: var(--path-3);
+        stroke-dashoffset: var(--path-3);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-3);
+    }
+  }
+  @keyframes line-aniamtion-3 {
+    0% {
+        stroke-dasharray: var(--path-3);
+        stroke-dashoffset: var(--path-3);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-3);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-4 {
+    0% {
+        stroke-dasharray: var(--path-4);
+        stroke-dashoffset: var(--path-4);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-4);
+    }
+  }
+  @keyframes line-aniamtion-4 {
+    0% {
+        stroke-dasharray: var(--path-4);
+        stroke-dashoffset: var(--path-4);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-4);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-5 {
+    0% {
+        stroke-dasharray: var(--path-5);
+        stroke-dashoffset: var(--path-5);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-5);
+    }
+  }
+  @keyframes line-aniamtion-5 {
+    0% {
+        stroke-dasharray: var(--path-5);
+        stroke-dashoffset: var(--path-5);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-5);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-6 {
+    0% {
+        stroke-dasharray: var(--path-6);
+        stroke-dashoffset: var(--path-6);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-6);
+    }
+  }
+  @keyframes line-aniamtion-6 {
+    0% {
+        stroke-dasharray: var(--path-6);
+        stroke-dashoffset: var(--path-6);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-6);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-7 {
+    0% {
+        stroke-dasharray: var(--path-7);
+        stroke-dashoffset: var(--path-7);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-7);
+    }
+  }
+  @keyframes line-aniamtion-7 {
+    0% {
+        stroke-dasharray: var(--path-7);
+        stroke-dashoffset: var(--path-7);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-7);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-8 {
+    0% {
+        stroke-dasharray: var(--path-8);
+        stroke-dashoffset: var(--path-8);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-8);
+    }
+  }
+  @keyframes line-aniamtion-8 {
+    0% {
+        stroke-dasharray: var(--path-8);
+        stroke-dashoffset: var(--path-8);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-8);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-9 {
+    0% {
+        stroke-dasharray: var(--path-9);
+        stroke-dashoffset: var(--path-9);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-9);
+    }
+  }
+  @keyframes line-aniamtion-9 {
+    0% {
+        stroke-dasharray: var(--path-9);
+        stroke-dashoffset: var(--path-9);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-9);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-10 {
+    0% {
+        stroke-dasharray: var(--path-10);
+        stroke-dashoffset: var(--path-10);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-10);
+    }
+  }
+  @keyframes line-aniamtion-10 {
+    0% {
+        stroke-dasharray: var(--path-10);
+        stroke-dashoffset: var(--path-10);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-10);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-11 {
+    0% {
+        stroke-dasharray: var(--path-11);
+        stroke-dashoffset: var(--path-11);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-11);
+    }
+  }
+  @keyframes line-aniamtion-11 {
+    0% {
+        stroke-dasharray: var(--path-11);
+        stroke-dashoffset: var(--path-11);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-11);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-12 {
+    0% {
+        stroke-dasharray: var(--path-12);
+        stroke-dashoffset: var(--path-12);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-12);
+    }
+  }
+  @keyframes line-aniamtion-12 {
+    0% {
+        stroke-dasharray: var(--path-12);
+        stroke-dashoffset: var(--path-12);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-12);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-13 {
+    0% {
+        stroke-dasharray: var(--path-13);
+        stroke-dashoffset: var(--path-13);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-13);
+    }
+  }
+  @keyframes line-aniamtion-13 {
+    0% {
+        stroke-dasharray: var(--path-13);
+        stroke-dashoffset: var(--path-13);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-13);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-14 {
+    0% {
+        stroke-dasharray: var(--path-14);
+        stroke-dashoffset: var(--path-14);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-14);
+    }
+  }
+  @keyframes line-aniamtion-14 {
+    0% {
+        stroke-dasharray: var(--path-14);
+        stroke-dashoffset: var(--path-14);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-14);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-15 {
+    0% {
+        stroke-dasharray: var(--path-15);
+        stroke-dashoffset: var(--path-15);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-15);
+    }
+  }
+  @keyframes line-aniamtion-15 {
+    0% {
+        stroke-dasharray: var(--path-15);
+        stroke-dashoffset: var(--path-15);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-15);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-16 {
+    0% {
+        stroke-dasharray: var(--path-16);
+        stroke-dashoffset: var(--path-16);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-16);
+    }
+  }
+  @keyframes line-aniamtion-16 {
+    0% {
+        stroke-dasharray: var(--path-16);
+        stroke-dashoffset: var(--path-16);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-16);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-17 {
+    0% {
+        stroke-dasharray: var(--path-17);
+        stroke-dashoffset: var(--path-17);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-17);
+    }
+  }
+  @keyframes line-aniamtion-17 {
+    0% {
+        stroke-dasharray: var(--path-17);
+        stroke-dashoffset: var(--path-17);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-17);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-18 {
+    0% {
+        stroke-dasharray: var(--path-18);
+        stroke-dashoffset: var(--path-18);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-18);
+    }
+  }
+  @keyframes line-aniamtion-18 {
+    0% {
+        stroke-dasharray: var(--path-18);
+        stroke-dashoffset: var(--path-18);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-18);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-19 {
+    0% {
+        stroke-dasharray: var(--path-19);
+        stroke-dashoffset: var(--path-19);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-19);
+    }
+  }
+  @keyframes line-aniamtion-19 {
+    0% {
+        stroke-dasharray: var(--path-19);
+        stroke-dashoffset: var(--path-19);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-19);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-20 {
+    0% {
+        stroke-dasharray: var(--path-20);
+        stroke-dashoffset: var(--path-20);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-20);
+    }
+  }
+  @keyframes line-aniamtion-20 {
+    0% {
+        stroke-dasharray: var(--path-20);
+        stroke-dashoffset: var(--path-20);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-20);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-21 {
+    0% {
+        stroke-dasharray: var(--path-21);
+        stroke-dashoffset: var(--path-21);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-21);
+    }
+  }
+  @keyframes line-aniamtion-21 {
+    0% {
+        stroke-dasharray: var(--path-21);
+        stroke-dashoffset: var(--path-21);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-21);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-22 {
+    0% {
+        stroke-dasharray: var(--path-22);
+        stroke-dashoffset: var(--path-22);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-22);
+    }
+  }
+  @keyframes line-aniamtion-22 {
+    0% {
+        stroke-dasharray: var(--path-22);
+        stroke-dashoffset: var(--path-22);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-22);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-23 {
+    0% {
+        stroke-dasharray: var(--path-23);
+        stroke-dashoffset: var(--path-23);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-23);
+    }
+  }
+  @keyframes line-aniamtion-23 {
+    0% {
+        stroke-dasharray: var(--path-23);
+        stroke-dashoffset: var(--path-23);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-23);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-24 {
+    0% {
+        stroke-dasharray: var(--path-24);
+        stroke-dashoffset: var(--path-24);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-24);
+    }
+  }
+  @keyframes line-aniamtion-24 {
+    0% {
+        stroke-dasharray: var(--path-24);
+        stroke-dashoffset: var(--path-24);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-24);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-25 {
+    0% {
+        stroke-dasharray: var(--path-25);
+        stroke-dashoffset: var(--path-25);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-25);
+    }
+  }
+  @keyframes line-aniamtion-25 {
+    0% {
+        stroke-dasharray: var(--path-25);
+        stroke-dashoffset: var(--path-25);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-25);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-26 {
+    0% {
+        stroke-dasharray: var(--path-26);
+        stroke-dashoffset: var(--path-26);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-26);
+    }
+  }
+  @keyframes line-aniamtion-26 {
+    0% {
+        stroke-dasharray: var(--path-26);
+        stroke-dashoffset: var(--path-26);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-26);
+    }
+  }
+  @-webkit-keyframes line-aniamtion-27 {
+    0% {
+        stroke-dasharray: var(--path-27);
+        stroke-dashoffset: var(--path-27);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-27);
+    }
+  }
+  @keyframes line-aniamtion-27 {
+    0% {
+        stroke-dasharray: var(--path-27);
+        stroke-dashoffset: var(--path-27);
+
+    }
+    60%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: var(--path-27);
     }
   }
 
   .hbr-leadspace-bg-image figure .circle-1 {
-    animation: twinkle 2s 2s infinite ease alternate;    
+    -webkit-animation: twinkle 2s 2s infinite ease alternate;
+            animation: twinkle 2s 2s infinite ease alternate;    
   }
 
   .hbr-leadspace-bg-image figure .circle-2 {
-    animation: twinkle 16s 16s infinite ease alternate;   
+    -webkit-animation: twinkle 16s 16s infinite ease alternate;
+            animation: twinkle 16s 16s infinite ease alternate;   
   }
 
   .hbr-leadspace-bg-image figure .circle-3 {
-    animation: twinkle 2s 2s infinite ease alternate; 
+    -webkit-animation: twinkle 2s 2s infinite ease alternate;
+            animation: twinkle 2s 2s infinite ease alternate; 
   }
 
   .hbr-leadspace-bg-image figure .circle-4 {
-    animation: twinkle 4s 4s infinite ease alternate;
+    -webkit-animation: twinkle 4s 4s infinite ease alternate;
+            animation: twinkle 4s 4s infinite ease alternate;
   }
 
   .hbr-leadspace-bg-image figure .circle-5 {
-    animation: twinkle 6s 6s infinite ease alternate; 
+    -webkit-animation: twinkle 6s 6s infinite ease alternate;
+            animation: twinkle 6s 6s infinite ease alternate; 
   }
 
   .hbr-leadspace-bg-image figure .circle-6 {
-    animation: twinkle 8s 8s infinite ease alternate;   
+    -webkit-animation: twinkle 8s 8s infinite ease alternate;
+            animation: twinkle 8s 8s infinite ease alternate;   
   }
 
   .hbr-leadspace-bg-image figure .circle-7 {
-    animation: twinkle 10s 10s infinite ease alternate;
+    -webkit-animation: twinkle 10s 10s infinite ease alternate;
+            animation: twinkle 10s 10s infinite ease alternate;
   }
 
   .hbr-leadspace-bg-image figure .circle-8 {
-    animation: twinkle 12s 12s infinite ease alternate;        
+    -webkit-animation: twinkle 12s 12s infinite ease alternate;
+            animation: twinkle 12s 12s infinite ease alternate;        
   }
 
   .hbr-leadspace-bg-image figure .circle-9 {
-    animation: twinkle 14s 14s infinite ease alternate;        
+    -webkit-animation: twinkle 14s 14s infinite ease alternate;
+            animation: twinkle 14s 14s infinite ease alternate;        
+  }
+
+  @-webkit-keyframes twinkle {
+    from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
   }
 
   @keyframes twinkle {
@@ -1084,3 +1862,32 @@ Animation of lines
         opacity: 1;
       }
   }
+:root {
+    --path-1:505.5911560058594;
+    --path-2:662.928955078125;
+    --path-3:295.60369873046875;
+    --path-4:207.05105590820312;
+    --path-5:235.32444763183594;
+    --path-6:220.89845275878906;
+    --path-7:234.63880920410156;
+    --path-8:231.25498962402344;
+    --path-9:1819.2205810546875;
+    --path-10:1292.0130615234375;
+    --path-11:448.5755615234375;
+    --path-12:334.1441650390625;
+    --path-13:389.2127990722656;
+    --path-14:510.2290954589844;
+    --path-15:370.1069641113281;
+    --path-16:494.5432434082031;
+    --path-17:84.16105651855469;
+    --path-18:81.72303771972656;
+    --path-19:52.90133285522461;
+    --path-20:614.989501953125;
+    --path-21:330;
+    --path-22:480;
+    --path-23:155;
+    --path-24:245;
+    --path-25:414;
+    --path-26:303;
+    --path-27:229;
+}

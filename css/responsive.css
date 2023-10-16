@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /*==============================================
     TABLET SCREEN DEVICES
 ==============================================*/
@@ -49,7 +56,8 @@
     }
 
     .hbr-image-text-module__inner .thumbnail-img {
-        flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
         padding: 0 10px;
     }
 
@@ -58,7 +66,8 @@
     }
 
     .hbr-image-text-module__inner .content {
-        flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
         padding: 0 10px;
     }
 
@@ -84,12 +93,14 @@
     }
 
     .hbr-image-card-with-text__inner .column-left {
-        flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
         padding: 0 10px;
     }
 
     .hbr-image-card-with-text__inner .column-right {
-        flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
         padding: 0 10px;
     }
 
@@ -113,13 +124,15 @@
 
     .hbr-text-module-sponsored__inner .column-left,
     .hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner .column-left {
-        flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
         margin-bottom: 20px;
     }
 
     .hbr-text-module-sponsored__inner .column-right,
     .hbr-text-module-sponsored--reverse .hbr-text-module-sponsored__inner .column-right {
-        flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
     }
 
     .hbr-text-module-sponsored__thumbnail img {
@@ -166,7 +179,9 @@
         }
 
         .hbr-leadspace--title h1 {
-            flex: 1 0 auto;
+            -webkit-box-flex: 1;
+                -ms-flex: 1 0 auto;
+                    flex: 1 0 auto;
             font-size: 68px;
             width: 100%;
         }
@@ -286,6 +301,9 @@
 ==============================================*/
 
 @media screen and (max-width: 767px) {
+    .hbr {
+        overflow-x: hidden;
+    }
 
     .hbr .container {
         padding: 0 25px;
@@ -299,31 +317,29 @@
         padding: 0 20px;
     }
 
-    .hbr-sub-navigation__links ul {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        margin-right: -20px;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        height: 40px;
+    .hbr-sub-navigation { 
+        position: fixed;
+    }
+    
+    .hbr-sub-navigation ul {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
 
     .hbr-sub-navigation__links ul li {
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        margin-bottom: 5px;
     }
 
-    .hbr-sub-navigation__links ul::-webkit-scrollbar {
-        display: none;
-    }
+    
 
     .hbr-sub-navigation__links ul li:not(:last-child) {
         margin-right: 16px;
     }
-
-    .hbr-sub-navigation__links ul {
-        justify-content: flex-start;
-        padding-right: 20px;
-    }
+    
 
     .hbr-leadspace-bg-image figure {
         bottom: 41%;
@@ -340,7 +356,8 @@
     =====================================================*/
 
     .hbr-image-text-module__inner .thumbnail-img {
-        flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
         margin-bottom: 16px;
     }
 
@@ -349,7 +366,8 @@
     }
 
     .hbr-image-text-module__inner .content {
-        flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
     }
 
     .hbr-image-text-module__inner .content h2 {
@@ -567,15 +585,25 @@
         width: 32px;
         height: 32px;
         border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 0;
     }
     
     .full-bg-banner.with-bg-inside .full-bg-banner-wrapper {
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     
     .full-bg-banner.with-bg-inside .full-bg-banner-title {
