@@ -204,7 +204,7 @@
             width: 100%;
         }
 
-        .hbr-leadspace-bg-image figure {
+        .hbr-path-animation {
             bottom: 27%;
         }
 
@@ -341,11 +341,11 @@
     }
     
 
-    .hbr-leadspace-bg-image figure {
+    .hbr-path-animation {
         bottom: 41%;
     }
 
-    .hbr-leadspace-bg-image figure {
+    .hbr-path-animation {
         left: -114%;
         width: 263%;
     }
@@ -514,6 +514,10 @@
         margin-bottom: 0;
         padding-top: 48px;
         padding-bottom: 48px;
+    }
+
+    .hbr-leadspace .column-left{
+        margin-bottom: 65px;
     }
 
     .hbr-leadspace--title h1 {

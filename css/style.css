@@ -248,16 +248,6 @@ HBR Leadspace
 =====================================================*/
 
 .hbr-leadspace {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -307,19 +297,12 @@ HBR Leadspace
 }
 
 .hbr-leadspace--title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     text-transform: uppercase;
     font-family: '72';    
     font-weight: 700;
     line-height: 1;
     margin-bottom: 48px;    
+    max-width: 870px;
 }
 
 .hbr-leadspace--title h1 {
@@ -357,11 +340,6 @@ HBR Leadspace
     width: 60%;
 }
 
-.hbr-leadspace figure {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-}
 
 .hbr-leadspace figure img {
     -o-object-fit: cover;
@@ -370,11 +348,12 @@ HBR Leadspace
     height: 100%;
 }
 
-.hbr-leadspace-bg-image figure {
+.hbr-path-animation {
     position: fixed;
     bottom: 16%;
     left: 0;
     width: 100%;
+    z-index: -1;
 }
 /*=====================================================
 HBR IMAGE TEXT MODULE STYLES
@@ -651,6 +630,10 @@ HBR IMAGE CARD WITH TEXT STYLES
 
 .card-featured-post__meta li {
     padding: 0 7px;
+}
+
+.card-featured-post__meta li:last-child{
+    font-weight: 30;
 }
 
 .card-featured-post__meta li svg {
@@ -1017,183 +1000,183 @@ section.ads {
 /*=====================================================
 Animation of lines
 =====================================================*/
-.hbr-leadspace-bg-image figure .path-1 {
+.hbr-path-animation .path-1 {
     /* stroke-dasharray:var(--path-1); */
     /* stroke-dashoffset: var(--path-1); */
     -webkit-animation: line-aniamtion-1 4s infinite normal linear;
             animation: line-aniamtion-1 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-2 {
+.hbr-path-animation .path-2 {
     /* stroke-dasharray: var(--path-2); */
     /* stroke-dashoffset: var(--path-2); */
     -webkit-animation: line-aniamtion-2 4s infinite normal linear;
             animation: line-aniamtion-2 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-3 {
+.hbr-path-animation .path-3 {
     /* stroke-dasharray:var(--path-3); */
     /* stroke-dashoffset: var(--path-3); */
     -webkit-animation: line-aniamtion-3 4s infinite normal linear;
             animation: line-aniamtion-3 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-4 {
+.hbr-path-animation .path-4 {
     /* stroke-dasharray:var(--path-4); */
     /* stroke-dashoffset: var(--path-4); */
     -webkit-animation: line-aniamtion-4 4s infinite normal linear;
             animation: line-aniamtion-4 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-5 {
+.hbr-path-animation .path-5 {
     /* stroke-dasharray: var(--path-5); */
     /* stroke-dashoffset: var(--path-5); */
     -webkit-animation: line-aniamtion-5 4s infinite normal linear;
             animation: line-aniamtion-5 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-6 {
+.hbr-path-animation .path-6 {
     /* stroke-dasharray:var(--path-6); */
     /* stroke-dashoffset: var(--path-6); */
     -webkit-animation: line-aniamtion-6 4s infinite normal linear;
             animation: line-aniamtion-6 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-7 {
+.hbr-path-animation .path-7 {
     /* stroke-dasharray:var(--path-7); */
     /* stroke-dashoffset: var(--path-7); */
     -webkit-animation: line-aniamtion-7 4s infinite normal linear;
             animation: line-aniamtion-7 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-8 {
+.hbr-path-animation .path-8 {
     /* stroke-dasharray: var(--path-8); */
     /* stroke-dashoffset: var(--path-8); */
     -webkit-animation: line-aniamtion-8 4s infinite normal linear;
             animation: line-aniamtion-8 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-9 {
+.hbr-path-animation .path-9 {
     /* stroke-dasharray:var(--path-9); */
     /* stroke-dashoffset: var(--path-9); */
     -webkit-animation: line-aniamtion-9 4s infinite normal linear;
             animation: line-aniamtion-9 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-10 {
+.hbr-path-animation .path-10 {
     /* stroke-dasharray:var(--path-10); */
     /* stroke-dashoffset: var(--path-10); */
     -webkit-animation: line-aniamtion-10 4s infinite normal linear;
             animation: line-aniamtion-10 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-11 {
+.hbr-path-animation .path-11 {
     /* stroke-dasharray: var(--path-11); */
     /* stroke-dashoffset: var(--path-11); */
     -webkit-animation: line-aniamtion-11 4s infinite normal linear;
             animation: line-aniamtion-11 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-12 {
+.hbr-path-animation .path-12 {
     /* stroke-dasharray:var(--path-12); */
     /* stroke-dashoffset: var(--path-12); */
     -webkit-animation: line-aniamtion-12 4s infinite normal linear;
             animation: line-aniamtion-12 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-13 {
+.hbr-path-animation .path-13 {
     /* stroke-dasharray:var(--path-13); */
     /* stroke-dashoffset: var(--path-13); */
     -webkit-animation: line-aniamtion-13 4s infinite normal linear;
             animation: line-aniamtion-13 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-14 {
+.hbr-path-animation .path-14 {
     /* stroke-dasharray: var(--path-14); */
     /* stroke-dashoffset: var(--path-14); */
     -webkit-animation: line-aniamtion-14 4s infinite normal linear;
             animation: line-aniamtion-14 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-15 {
+.hbr-path-animation .path-15 {
     /* stroke-dasharray:var(--path-15); */
     /* stroke-dashoffset: var(--path-15); */
     -webkit-animation: line-aniamtion-15 4s infinite normal linear;
             animation: line-aniamtion-15 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-16 {
+.hbr-path-animation .path-16 {
     /* stroke-dasharray:var(--path-16); */
     /* stroke-dashoffset: var(--path-16); */
     -webkit-animation: line-aniamtion-16 4s infinite normal linear;
             animation: line-aniamtion-16 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-17 {
+.hbr-path-animation .path-17 {
     /* stroke-dasharray: var(--path-17); */
     /* stroke-dashoffset: var(--path-17); */
     -webkit-animation: line-aniamtion-17 4s infinite normal linear;
             animation: line-aniamtion-17 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-18 {
+.hbr-path-animation .path-18 {
     /* stroke-dasharray:var(--path-18); */
     /* stroke-dashoffset: var(--path-18); */
     -webkit-animation: line-aniamtion-18 4s infinite normal linear;
             animation: line-aniamtion-18 4s infinite normal linear;
 }
 
-.hbr-leadspace-bg-image figure .path-19 {
+.hbr-path-animation .path-19 {
     /* stroke-dasharray: var(--path-19); */
     /* stroke-dashoffset:  var(--path-19); */
     -webkit-animation: line-aniamtion-19 4s infinite normal linear;
             animation: line-aniamtion-19 4s infinite normal linear;
   }
-  .hbr-leadspace-bg-image figure .path-20 {
+  .hbr-path-animation .path-20 {
     /* stroke-dasharray: var(--path-1); */
     /* stroke-dashoffset: var(--path-1); */
     -webkit-animation: line-aniamtion-20 4s infinite normal linear;
             animation: line-aniamtion-20 4s infinite normal linear;
   }
-  .hbr-leadspace-bg-image figure .path-21 {
+  .hbr-path-animation .path-21 {
     /* stroke-dasharray:var(--path-21); */
     /* stroke-dashoffset: var(--path-21); */
     -webkit-animation: line-aniamtion-21 4s infinite normal linear;
             animation: line-aniamtion-21 4s infinite normal linear;
   }
 
-  .hbr-leadspace-bg-image figure .path-22 {
+  .hbr-path-animation .path-22 {
     /* stroke-dasharray:var(--path-22); */
     /* stroke-dashoffset: var(--path-22); */
     -webkit-animation: line-aniamtion-22 4s infinite normal linear;
             animation: line-aniamtion-22 4s infinite normal linear;
   }
-  .hbr-leadspace-bg-image figure .path-23 {
+  .hbr-path-animation .path-23 {
     /* stroke-dasharray: var(--path-23); */
     /* stroke-dashoffset: var(--path-23); */
     -webkit-animation: line-aniamtion-23 4s infinite normal linear;
             animation: line-aniamtion-23 4s infinite normal linear;
   }
-  .hbr-leadspace-bg-image figure .path-24 {
+  .hbr-path-animation .path-24 {
     /* stroke-dasharray:var(--path-24); */
     /* stroke-dashoffset: var(--path-24); */
     -webkit-animation: line-aniamtion-24 4s infinite normal linear;
             animation: line-aniamtion-24 4s infinite normal linear;
   }
 
-  .hbr-leadspace-bg-image figure .path-25 {
+  .hbr-path-animation .path-25 {
     /* stroke-dasharray:var(--path-25); */
     /* stroke-dashoffset: var(--path-25); */
     -webkit-animation: line-aniamtion-25 4s infinite normal linear;
             animation: line-aniamtion-25 4s infinite normal linear;
   }
-  .hbr-leadspace-bg-image figure .path-26 {
+  .hbr-path-animation .path-26 {
     /* stroke-dasharray: var(--path-26); */
     /* stroke-dashoffset: var(--path-26); */
     -webkit-animation: line-aniamtion-26 4s infinite normal linear;
             animation: line-aniamtion-26 4s infinite normal linear;
   }
-  .hbr-leadspace-bg-image figure .path-27 {
+  .hbr-path-animation .path-27 {
     /* stroke-dasharray:var(--path-27); */
     /* stroke-dashoffset: var(--path-27); */
     -webkit-animation: line-aniamtion-27 4s infinite normal linear;
@@ -1798,47 +1781,47 @@ Animation of lines
     }
   }
 
-  .hbr-leadspace-bg-image figure .circle-1 {
+  .hbr-path-animation .circle-1 {
     -webkit-animation: twinkle 2s 2s infinite ease alternate;
             animation: twinkle 2s 2s infinite ease alternate;    
   }
 
-  .hbr-leadspace-bg-image figure .circle-2 {
+  .hbr-path-animation .circle-2 {
     -webkit-animation: twinkle 16s 16s infinite ease alternate;
             animation: twinkle 16s 16s infinite ease alternate;   
   }
 
-  .hbr-leadspace-bg-image figure .circle-3 {
+  .hbr-path-animation .circle-3 {
     -webkit-animation: twinkle 2s 2s infinite ease alternate;
             animation: twinkle 2s 2s infinite ease alternate; 
   }
 
-  .hbr-leadspace-bg-image figure .circle-4 {
+  .hbr-path-animation .circle-4 {
     -webkit-animation: twinkle 4s 4s infinite ease alternate;
             animation: twinkle 4s 4s infinite ease alternate;
   }
 
-  .hbr-leadspace-bg-image figure .circle-5 {
+  .hbr-path-animation .circle-5 {
     -webkit-animation: twinkle 6s 6s infinite ease alternate;
             animation: twinkle 6s 6s infinite ease alternate; 
   }
 
-  .hbr-leadspace-bg-image figure .circle-6 {
+  .hbr-path-animation .circle-6 {
     -webkit-animation: twinkle 8s 8s infinite ease alternate;
             animation: twinkle 8s 8s infinite ease alternate;   
   }
 
-  .hbr-leadspace-bg-image figure .circle-7 {
+  .hbr-path-animation .circle-7 {
     -webkit-animation: twinkle 10s 10s infinite ease alternate;
             animation: twinkle 10s 10s infinite ease alternate;
   }
 
-  .hbr-leadspace-bg-image figure .circle-8 {
+  .hbr-path-animation .circle-8 {
     -webkit-animation: twinkle 12s 12s infinite ease alternate;
             animation: twinkle 12s 12s infinite ease alternate;        
   }
 
-  .hbr-leadspace-bg-image figure .circle-9 {
+  .hbr-path-animation .circle-9 {
     -webkit-animation: twinkle 14s 14s infinite ease alternate;
             animation: twinkle 14s 14s infinite ease alternate;        
   }
