@@ -242,7 +242,10 @@ HBR SUB NAVIGATION STYLES
     opacity: 1;
     visibility: visible;
 }
-
+.hbr .container {
+    z-index: 2;
+    position: relative;
+}
 /*=====================================================
 HBR Leadspace
 =====================================================*/
@@ -258,7 +261,7 @@ HBR Leadspace
 }
 .hbr-section-overlay {
     position: relative;
-    z-index: 1;
+    z-index: unset;
 }
 
 .hbr-section-overlay::before {
@@ -271,7 +274,7 @@ HBR Leadspace
     background: -webkit-gradient(linear, left top, left bottom, color-stop(4.47%, rgba(0, 0, 0, 0.00)), color-stop(77.14%, #000));
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
-    z-index: -1;
+    z-index: 1;
 }
 
 .hbr-leadspace-bg-image {
@@ -353,7 +356,7 @@ HBR Leadspace
     bottom: 16%;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 /*=====================================================
 HBR IMAGE TEXT MODULE STYLES
@@ -986,7 +989,7 @@ ADS
 
 section.ads {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 .ads-conternt {
     margin: 160px auto;
