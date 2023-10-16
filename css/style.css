@@ -353,7 +353,7 @@ HBR Leadspace
     bottom: 16%;
     left: 0;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
 }
 /*=====================================================
 HBR IMAGE TEXT MODULE STYLES
@@ -968,8 +968,6 @@ HBR FULL BACKGROUND BANNER
 .hbr-sap-section {
     scroll-padding-top: 75px;
     scroll-margin: 75px;
-    z-index: 1;
-    position: relative;
 }
 
 .text-blue {
