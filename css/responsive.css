@@ -314,6 +314,10 @@
         display: block;
     }
 
+    .hbr-text-module-sponsored__inner {
+        display: block;
+    }
+
     /*=====================================================
     HBR SUB NAVIGATION STYLES
     =====================================================*/
@@ -668,5 +672,9 @@
     .column-full-width .card-featured-post__content {
         bottom: auto;
         top: 0;
+    }
+
+    .column-full-width {
+        margin-top: 30px;
     }
 }
