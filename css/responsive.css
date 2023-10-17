@@ -11,6 +11,10 @@
 
 @media screen and (max-width: 1199px) {
 
+    .have-heading {
+        font-size: 20px;
+    }
+
     .hbr .container {
         padding: 0 22px;
     }
@@ -52,13 +56,12 @@
     }
 
     .hbr-image-text-module__inner {
-        margin: 0 -10px;
+        gap: 20px;
     }
 
     .hbr-image-text-module__inner .thumbnail-img {
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
-        padding: 0 10px;
+        -ms-flex-preferred-size: calc(50% - 10px);
+            flex-basis: calc(50% - 10px);
     }
 
     .hbr-image-text-module__inner .thumbnail-img img {
@@ -66,9 +69,8 @@
     }
 
     .hbr-image-text-module__inner .content {
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
-        padding: 0 10px;
+        -ms-flex-preferred-size: calc(50% - 10px);
+            flex-basis: calc(50% - 10px);
     }
 
     .hbr-image-text-module__inner .content h2 {
@@ -89,19 +91,18 @@
     }
 
     .hbr-image-card-with-text__inner {
-        margin: 0 -10px;
+        gap: 20px;
     }
+    
 
     .hbr-image-card-with-text__inner .column-left {
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
-        padding: 0 10px;
+        -ms-flex-preferred-size: calc(50% - 10px);
+            flex-basis: calc(50% - 10px);
     }
 
     .hbr-image-card-with-text__inner .column-right {
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
-        padding: 0 10px;
+        -ms-flex-preferred-size: calc(50% - 10px);
+            flex-basis: calc(50% - 10px);
     }
 
     .hbr-image-card-with-text__inner .column-right .card-featured-post__content {
@@ -254,19 +255,15 @@
         }
 
         .hbr-text-module-sponsored__inner {
-            margin: 0 -10px;
+            gap: 20px;
         }
 
         .hbr .column-left-one {
-            width: 50%;
-            padding-left: 10px;
-            padding-right: 10px;
+            width: calc(50% - 10px);
         }
 
         .hbr .two-col .column-middle-two {
-            width: 50%;
-            padding-left: 10px;
-            padding-right: 10px;
+            width: calc(50% - 10px);
         }
 
         .two-col .column-middle-two .card-featured-post__content {
@@ -289,7 +286,7 @@
         }
 
         .hbr .three-col .column-left-one {
-            width: 39.2%;
+            width: calc(39.2% - 10px);
         }
     }
 
@@ -309,6 +306,14 @@
         padding: 0 25px;
     }
 
+    .hbr-path-animation.md-up-display {
+        display: none;
+    }
+
+    .hbr-path-animation.mobile-display {
+        display: block;
+    }
+
     /*=====================================================
     HBR SUB NAVIGATION STYLES
     =====================================================*/
@@ -319,6 +324,7 @@
 
     .hbr-sub-navigation { 
         position: fixed;
+        width: 100%;
     }
     
     .hbr-sub-navigation ul {
@@ -372,7 +378,7 @@
 
     .hbr-image-text-module__inner .content h2 {
         max-width: 100%;
-        font-size: 56px;
+        font-size: 50px;
         line-height: 60px;
         letter-spacing: -2.8px;
         margin-bottom: 16px;
@@ -387,7 +393,11 @@
     .hbr-image-text-module__inner .content-inner-wrap {
         border-top: none;
         border-bottom: none;
-        padding: 10px 0px;
+        padding: 10px 15px;
+    }
+
+    .hbr-image-text-module__inner {
+        display: block;
     }
 
 
@@ -503,7 +513,8 @@
 
     .hbr-image-card-with-text__inner.reverese-direction .column-left {
         margin-top: 60px;
-    }
+        padding-right: 15px;
+    }   
 
      
     /*=====================================================
@@ -648,5 +659,14 @@
     .hbr-leadspace-bg-image {
         background-position-x: 80%;
         width: 184%;
+    }
+
+    .hbr .three-col .column-full-width .card-featured-post.have-icon > a {
+        aspect-ratio: 328/220
+    }
+
+    .column-full-width .card-featured-post__content {
+        bottom: auto;
+        top: 0;
     }
 }
