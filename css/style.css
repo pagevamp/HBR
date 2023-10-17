@@ -1889,6 +1889,7 @@ Animation of lines
     font-weight: 900;
     line-height: 1.083;
     letter-spacing: -0.24px;
+    margin-right: 10px;
 }
 
 .column-full-width {
