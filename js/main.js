@@ -155,7 +155,7 @@ targets.forEach(target => {
   observerSpan.observe(target);
 })
 
-let length = document.querySelectorAll(".hbr-leadspace-bg-image figure path");
+let length = document.querySelectorAll(".hbr-path-animation path");
 
 if(length) {
   for(let i = 0; i<length.length; i++){

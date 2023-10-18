@@ -170,7 +170,7 @@
         =====================================================*/
 
         .hbr-leadspace {
-            margin-bottom: 121px;
+            padding-bottom: 121px;
 
         }
         .hbr-leadspace--eyebrow {
@@ -237,7 +237,6 @@
         .full-bg-banner {
             padding-top: 42px;
             padding-bottom: 54px;
-            margin-top: 80px;
         }
 
         .full-bg-banner.with-bg-inside {
@@ -287,6 +286,11 @@
 
         .hbr .three-col .column-left-one {
             width: calc(39.2% - 10px);
+        }
+
+        section.ads {
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
     }
 
@@ -397,7 +401,7 @@
     .hbr-image-text-module__inner .content-inner-wrap {
         border-top: none;
         border-bottom: none;
-        padding: 10px 15px;
+        padding: 10px 0;
     }
 
     .hbr-image-text-module__inner {
@@ -517,7 +521,6 @@
 
     .hbr-image-card-with-text__inner.reverese-direction .column-left {
         margin-top: 60px;
-        padding-right: 15px;
     }   
 
      
@@ -652,12 +655,10 @@
 
     .full-bg-banner.with-bg-inside .full-bg-banner-title {
         width: 80%;
-    }    
-
+    }
     .ads-conternt {
         height: 50px;
-        margin-top: 80px;
-        margin-bottom: 80px;
+        
     }
 
     .hbr-leadspace-bg-image {
