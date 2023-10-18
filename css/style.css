@@ -281,11 +281,25 @@ HBR Leadspace
     z-index: -1;    
 }
 
-.hbr-dark-overlay.last-section::before {
+.hbr-dark-overlay.bottom-section::before {
     bottom: 10%;
 }
 
-.hbr-dark-overlay.last-section::after {
+.top-overlay .hbr-image-text-module {
+    position: relative;
+}
+
+.top-overlay .hbr-image-text-module::before {
+    position: absolute;
+    content: '';
+    bottom: 92%;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.47%, #000 77.14%);
+}
+
+.hbr-dark-overlay.bottom-section::after {
     position: absolute;
     content: '';
     top: 90%;
