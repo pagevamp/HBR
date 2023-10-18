@@ -519,10 +519,6 @@
         margin-top: 30px;
     }
 
-    .hbr-image-card-with-text__inner.reverese-direction .column-left {
-        margin-top: 60px;
-    }   
-
      
     /*=====================================================
         HBR Leadspace
@@ -530,7 +526,7 @@
 
     .hbr-leadspace {
         margin-bottom: 0;
-        padding-top: 48px;
+        padding-top: 72px;
         padding-bottom: 48px;
     }
 
@@ -541,6 +537,7 @@
     .hbr-leadspace--title h1 {
         font-size: 40px;
         margin-bottom: 0;
+        padding-right: 36px;
     }
     
     .hbr-leadspace--description-title {
