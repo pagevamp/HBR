@@ -1031,6 +1031,7 @@ HBR FULL BACKGROUND BANNER
     position: absolute;
     right: 22%;
     z-index: -1;
+    max-width: 450px;
 }
 /*=====================================================
 ADS
