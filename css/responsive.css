@@ -270,6 +270,7 @@
         }
         .full-bg-banner-img {
             right: 0;
+            max-width: 181px;
         }
 
         .card-featured-post__content {

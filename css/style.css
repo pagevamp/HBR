@@ -804,6 +804,7 @@ HBR TEXT MODULE SPONSORED STYLES
 
 .three-col .card-featured-post__icon {
     right: -23%;
+    max-width: 185px;
 }
 
 .card-sponsored {
@@ -1953,4 +1954,5 @@ Animation of lines
 
 .three-col .column-full-width .card-featured-post__icon {
     right: 32px;
+    max-width: 399px;
 }
