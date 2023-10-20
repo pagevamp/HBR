@@ -656,6 +656,7 @@ HBR IMAGE CARD WITH TEXT STYLES
     line-height: 32px;
     font-weight: 700;
     margin-bottom: 16px;
+    color: #fff;
 }
 
 .card-featured-post__content p {
