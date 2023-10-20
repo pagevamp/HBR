@@ -668,4 +668,10 @@
     .column-full-width {
         margin-top: 30px;
     }
+
+    .two-col .column-middle-two figure {
+        height: 162px;
+        width: 87px;
+        right: 0;
+    }
 }

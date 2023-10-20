@@ -105,6 +105,7 @@ html {
     line-height: 32px;
     background: #000;
     position: relative;
+    margin-top: 124px;
 }
 
 .hbr h1,
@@ -370,9 +371,7 @@ HBR Leadspace
 
 .hbr-leadspace--title h1 {
     margin: 0;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0;
-            flex: 1 0;
+    color: #fff;
     font-size: 80px;
 }
 
@@ -413,7 +412,7 @@ HBR Leadspace
 
 .hbr-path-animation {
     position: fixed;
-    bottom: 16%;
+    bottom: 0;
     left: 0;
     width: 100%;
     z-index: 1;
@@ -1955,4 +1954,12 @@ Animation of lines
 .three-col .column-full-width .card-featured-post__icon {
     right: 32px;
     max-width: 399px;
+}
+
+.two-col .column-middle-two figure {
+    height: 184px;
+}
+
+p:empty{
+    display:none;
 }
